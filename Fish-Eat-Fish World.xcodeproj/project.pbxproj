@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BD2A76251EE3EBF000356490 /* Fish+HelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2A76241EE3EBF000356490 /* Fish+HelperMethods.m */; };
+		BD2A762B1EE3F51000356490 /* RandomPointGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2A762A1EE3F51000356490 /* RandomPointGenerator.m */; };
+		BD2A762D1EE3FB2500356490 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2A762C1EE3FB2500356490 /* Constants.m */; };
+		BD2CF68A1EE26EA8007A1387 /* OceanScene3.sks in Resources */ = {isa = PBXBuildFile; fileRef = BD2CF6891EE26EA8007A1387 /* OceanScene3.sks */; };
+		BD2CF68C1EE26F0B007A1387 /* OceanFloorTileSet2.sks in Resources */ = {isa = PBXBuildFile; fileRef = BD2CF68B1EE26F0B007A1387 /* OceanFloorTileSet2.sks */; };
+		BD38EDA91EE199F8009C235F /* TextureAtlasManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BD38EDA81EE199F8009C235F /* TextureAtlasManager.m */; };
+		BD38EDAC1EE19CCA009C235F /* Fish.m in Sources */ = {isa = PBXBuildFile; fileRef = BD38EDAB1EE19CCA009C235F /* Fish.m */; };
+		BD5AC29E1EE4C64F00EB093F /* InputControlSelectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5AC29D1EE4C64F00EB093F /* InputControlSelectionController.m */; };
+		BD5AC2A31EE548C400EB093F /* InputControlType.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5AC2A21EE548C400EB093F /* InputControlType.m */; };
+		BD5AC2A61EE5505B00EB093F /* FishSelectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5AC2A51EE5505B00EB093F /* FishSelectionController.m */; };
+		BD5AC2A91EE560F600EB093F /* GameConfigurationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5AC2A81EE560F600EB093F /* GameConfigurationController.m */; };
+		BD66068D1EE6524F00CB1C7E /* BackgroundSelectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD66068C1EE6524F00CB1C7E /* BackgroundSelectionController.m */; };
+		BD826E7E1EE2669000E45308 /* OceanWaterTileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = BD826E7D1EE2669000E45308 /* OceanWaterTileSet.sks */; };
+		BDA56DA11EE16930004D724E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA56DA01EE16930004D724E /* main.m */; };
+		BDA56DA41EE16930004D724E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA56DA31EE16930004D724E /* AppDelegate.m */; };
+		BDA56DAB1EE16930004D724E /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA56DAA1EE16930004D724E /* GameScene.m */; };
+		BDA56DAE1EE16930004D724E /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA56DAD1EE16930004D724E /* GameViewController.m */; };
+		BDA56DB11EE16930004D724E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDA56DAF1EE16930004D724E /* Main.storyboard */; };
+		BDA56DB31EE16930004D724E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDA56DB21EE16930004D724E /* Assets.xcassets */; };
+		BDA56DB61EE16930004D724E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDA56DB41EE16930004D724E /* LaunchScreen.storyboard */; };
+		BDA56DBF1EE17549004D724E /* UIColor+FishColorSchemes.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA56DBE1EE17549004D724E /* UIColor+FishColorSchemes.m */; };
+		BDA56DC21EE175D4004D724E /* UIColor+SpecialColorSchemes.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA56DC11EE175D4004D724E /* UIColor+SpecialColorSchemes.m */; };
+		BDBC79AB1EE27254002512E9 /* OceanScene4.sks in Resources */ = {isa = PBXBuildFile; fileRef = BDBC79AA1EE27254002512E9 /* OceanScene4.sks */; };
+		BDC89D411EE2688C008E3785 /* OceanScene2.sks in Resources */ = {isa = PBXBuildFile; fileRef = BDC89D401EE2688C008E3785 /* OceanScene2.sks */; };
+		BDE4A0361EE264FD00A13E57 /* OceanFloorTileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = BDE4A0341EE264FD00A13E57 /* OceanFloorTileSet.sks */; };
+		BDE4A0371EE264FD00A13E57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDE4A0351EE264FD00A13E57 /* Assets.xcassets */; };
+		BDE4A0391EE2659B00A13E57 /* OceanScene1.sks in Resources */ = {isa = PBXBuildFile; fileRef = BDE4A0381EE2659B00A13E57 /* OceanScene1.sks */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BD2A76241EE3EBF000356490 /* Fish+HelperMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Fish+HelperMethods.m"; sourceTree = "<group>"; };
+		BD2A76261EE3EC0100356490 /* Fish+HelperMethods.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fish+HelperMethods.h"; sourceTree = "<group>"; };
+		BD2A76271EE3ECD600356490 /* FishColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FishColor.h; sourceTree = "<group>"; };
+		BD2A76281EE3F2F800356490 /* FishConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FishConfiguration.h; sourceTree = "<group>"; };
+		BD2A76291EE3F4A900356490 /* RandomPointGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RandomPointGenerator.h; sourceTree = "<group>"; };
+		BD2A762A1EE3F51000356490 /* RandomPointGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomPointGenerator.m; sourceTree = "<group>"; };
+		BD2A762C1EE3FB2500356490 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		BD2A762E1EE3FB3100356490 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		BD2B118B1EE409BF00170261 /* FishOrientation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FishOrientation.h; sourceTree = "<group>"; };
+		BD2CF6891EE26EA8007A1387 /* OceanScene3.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = OceanScene3.sks; sourceTree = "<group>"; };
+		BD2CF68B1EE26F0B007A1387 /* OceanFloorTileSet2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = OceanFloorTileSet2.sks; sourceTree = "<group>"; };
+		BD38EDA71EE199DC009C235F /* TextureAtlasManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextureAtlasManager.h; sourceTree = "<group>"; };
+		BD38EDA81EE199F8009C235F /* TextureAtlasManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextureAtlasManager.m; sourceTree = "<group>"; };
+		BD38EDAB1EE19CCA009C235F /* Fish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fish.m; sourceTree = "<group>"; };
+		BD38EDAD1EE19CD3009C235F /* Fish.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fish.h; sourceTree = "<group>"; };
+		BD5AC29D1EE4C64F00EB093F /* InputControlSelectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputControlSelectionController.m; sourceTree = "<group>"; };
+		BD5AC29F1EE4C66800EB093F /* InputControlSelectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputControlSelectionController.h; sourceTree = "<group>"; };
+		BD5AC2A11EE5437C00EB093F /* InputControlType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputControlType.h; sourceTree = "<group>"; };
+		BD5AC2A21EE548C400EB093F /* InputControlType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputControlType.m; sourceTree = "<group>"; };
+		BD5AC2A41EE5502800EB093F /* FishSelectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FishSelectionController.h; sourceTree = "<group>"; };
+		BD5AC2A51EE5505B00EB093F /* FishSelectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FishSelectionController.m; sourceTree = "<group>"; };
+		BD5AC2A71EE560C000EB093F /* GameConfigurationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfigurationController.h; sourceTree = "<group>"; };
+		BD5AC2A81EE560F600EB093F /* GameConfigurationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameConfigurationController.m; sourceTree = "<group>"; };
+		BD66068B1EE6521300CB1C7E /* BackgroundSelectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BackgroundSelectionController.h; sourceTree = "<group>"; };
+		BD66068C1EE6524F00CB1C7E /* BackgroundSelectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundSelectionController.m; sourceTree = "<group>"; };
+		BD6606911EE655A200CB1C7E /* BackgroundSceneCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BackgroundSceneCategory.h; sourceTree = "<group>"; };
+		BD826E7D1EE2669000E45308 /* OceanWaterTileSet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = OceanWaterTileSet.sks; sourceTree = "<group>"; };
+		BDA56D9C1EE16930004D724E /* Fish-Eat-Fish World.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fish-Eat-Fish World.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDA56DA01EE16930004D724E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BDA56DA21EE16930004D724E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BDA56DA31EE16930004D724E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BDA56DA91EE16930004D724E /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		BDA56DAA1EE16930004D724E /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		BDA56DAC1EE16930004D724E /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		BDA56DAD1EE16930004D724E /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		BDA56DB01EE16930004D724E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BDA56DB21EE16930004D724E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BDA56DB51EE16930004D724E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BDA56DB71EE16930004D724E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDA56DBD1EE17549004D724E /* UIColor+FishColorSchemes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+FishColorSchemes.h"; sourceTree = "<group>"; };
+		BDA56DBE1EE17549004D724E /* UIColor+FishColorSchemes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FishColorSchemes.m"; sourceTree = "<group>"; };
+		BDA56DC01EE17587004D724E /* UIColor+SpecialColorSchemes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+SpecialColorSchemes.h"; sourceTree = "<group>"; };
+		BDA56DC11EE175D4004D724E /* UIColor+SpecialColorSchemes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SpecialColorSchemes.m"; sourceTree = "<group>"; };
+		BDBC79AA1EE27254002512E9 /* OceanScene4.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = OceanScene4.sks; sourceTree = "<group>"; };
+		BDC89D401EE2688C008E3785 /* OceanScene2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = OceanScene2.sks; sourceTree = "<group>"; };
+		BDE4A0341EE264FD00A13E57 /* OceanFloorTileSet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = OceanFloorTileSet.sks; sourceTree = "<group>"; };
+		BDE4A0351EE264FD00A13E57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BDE4A0381EE2659B00A13E57 /* OceanScene1.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = OceanScene1.sks; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BDA56D991EE1692F004D724E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BD38EDAA1EE19CB4009C235F /* Fish */ = {
+			isa = PBXGroup;
+			children = (
+				BD38EDAB1EE19CCA009C235F /* Fish.m */,
+				BD38EDAD1EE19CD3009C235F /* Fish.h */,
+				BD2A76241EE3EBF000356490 /* Fish+HelperMethods.m */,
+				BD2A76261EE3EC0100356490 /* Fish+HelperMethods.h */,
+				BD2A76271EE3ECD600356490 /* FishColor.h */,
+				BD2A76281EE3F2F800356490 /* FishConfiguration.h */,
+				BD2B118B1EE409BF00170261 /* FishOrientation.h */,
+			);
+			name = Fish;
+			sourceTree = "<group>";
+		};
+		BD5AC2A01EE4C6D200EB093F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BD6606901EE6527800CB1C7E /* FishSelectionController */,
+				BD66068F1EE6526300CB1C7E /* InputControlSelectionController */,
+				BD66068E1EE6525600CB1C7E /* BackgroundSelectionController */,
+				BD5AC2A71EE560C000EB093F /* GameConfigurationController.h */,
+				BD5AC2A81EE560F600EB093F /* GameConfigurationController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BD66068E1EE6525600CB1C7E /* BackgroundSelectionController */ = {
+			isa = PBXGroup;
+			children = (
+				BD66068B1EE6521300CB1C7E /* BackgroundSelectionController.h */,
+				BD66068C1EE6524F00CB1C7E /* BackgroundSelectionController.m */,
+				BD6606911EE655A200CB1C7E /* BackgroundSceneCategory.h */,
+			);
+			name = BackgroundSelectionController;
+			sourceTree = "<group>";
+		};
+		BD66068F1EE6526300CB1C7E /* InputControlSelectionController */ = {
+			isa = PBXGroup;
+			children = (
+				BD5AC29D1EE4C64F00EB093F /* InputControlSelectionController.m */,
+				BD5AC29F1EE4C66800EB093F /* InputControlSelectionController.h */,
+				BD5AC2A11EE5437C00EB093F /* InputControlType.h */,
+				BD5AC2A21EE548C400EB093F /* InputControlType.m */,
+			);
+			name = InputControlSelectionController;
+			sourceTree = "<group>";
+		};
+		BD6606901EE6527800CB1C7E /* FishSelectionController */ = {
+			isa = PBXGroup;
+			children = (
+				BD5AC2A41EE5502800EB093F /* FishSelectionController.h */,
+				BD5AC2A51EE5505B00EB093F /* FishSelectionController.m */,
+			);
+			name = FishSelectionController;
+			sourceTree = "<group>";
+		};
+		BDA56D931EE1692F004D724E = {
+			isa = PBXGroup;
+			children = (
+				BDBC79AA1EE27254002512E9 /* OceanScene4.sks */,
+				BD2CF68B1EE26F0B007A1387 /* OceanFloorTileSet2.sks */,
+				BD2CF6891EE26EA8007A1387 /* OceanScene3.sks */,
+				BDC89D401EE2688C008E3785 /* OceanScene2.sks */,
+				BDE4A0381EE2659B00A13E57 /* OceanScene1.sks */,
+				BD826E7D1EE2669000E45308 /* OceanWaterTileSet.sks */,
+				BDE4A0341EE264FD00A13E57 /* OceanFloorTileSet.sks */,
+				BDE4A0351EE264FD00A13E57 /* Assets.xcassets */,
+				BDA56D9E1EE16930004D724E /* Fish-Eat-Fish World */,
+				BDA56D9D1EE16930004D724E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BDA56D9D1EE16930004D724E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BDA56D9C1EE16930004D724E /* Fish-Eat-Fish World.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BDA56D9E1EE16930004D724E /* Fish-Eat-Fish World */ = {
+			isa = PBXGroup;
+			children = (
+				BD5AC2A01EE4C6D200EB093F /* ViewControllers */,
+				BD38EDAA1EE19CB4009C235F /* Fish */,
+				BDA56DC51EE1947D004D724E /* GameUtils */,
+				BDA56DA21EE16930004D724E /* AppDelegate.h */,
+				BDA56DA31EE16930004D724E /* AppDelegate.m */,
+				BDA56DA91EE16930004D724E /* GameScene.h */,
+				BDA56DAA1EE16930004D724E /* GameScene.m */,
+				BDA56DAC1EE16930004D724E /* GameViewController.h */,
+				BDA56DAD1EE16930004D724E /* GameViewController.m */,
+				BDA56DAF1EE16930004D724E /* Main.storyboard */,
+				BDA56DB21EE16930004D724E /* Assets.xcassets */,
+				BDA56DB41EE16930004D724E /* LaunchScreen.storyboard */,
+				BDA56DB71EE16930004D724E /* Info.plist */,
+				BDA56D9F1EE16930004D724E /* Supporting Files */,
+			);
+			path = "Fish-Eat-Fish World";
+			sourceTree = "<group>";
+		};
+		BDA56D9F1EE16930004D724E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BDA56DA01EE16930004D724E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BDA56DC51EE1947D004D724E /* GameUtils */ = {
+			isa = PBXGroup;
+			children = (
+				BDA56DBD1EE17549004D724E /* UIColor+FishColorSchemes.h */,
+				BDA56DBE1EE17549004D724E /* UIColor+FishColorSchemes.m */,
+				BDA56DC11EE175D4004D724E /* UIColor+SpecialColorSchemes.m */,
+				BDA56DC01EE17587004D724E /* UIColor+SpecialColorSchemes.h */,
+				BD38EDA71EE199DC009C235F /* TextureAtlasManager.h */,
+				BD38EDA81EE199F8009C235F /* TextureAtlasManager.m */,
+				BD2A76291EE3F4A900356490 /* RandomPointGenerator.h */,
+				BD2A762A1EE3F51000356490 /* RandomPointGenerator.m */,
+				BD2A762C1EE3FB2500356490 /* Constants.m */,
+				BD2A762E1EE3FB3100356490 /* Constants.h */,
+			);
+			name = GameUtils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BDA56D9B1EE1692F004D724E /* Fish-Eat-Fish World */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDA56DBA1EE16930004D724E /* Build configuration list for PBXNativeTarget "Fish-Eat-Fish World" */;
+			buildPhases = (
+				BDA56D981EE1692F004D724E /* Sources */,
+				BDA56D991EE1692F004D724E /* Frameworks */,
+				BDA56D9A1EE1692F004D724E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Fish-Eat-Fish World";
+			productName = "Fish-Eat-Fish World";
+			productReference = BDA56D9C1EE16930004D724E /* Fish-Eat-Fish World.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BDA56D941EE1692F004D724E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = AlexMakedonski;
+				TargetAttributes = {
+					BDA56D9B1EE1692F004D724E = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = T9J39WJJ9G;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = BDA56D971EE1692F004D724E /* Build configuration list for PBXProject "Fish-Eat-Fish World" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BDA56D931EE1692F004D724E;
+			productRefGroup = BDA56D9D1EE16930004D724E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BDA56D9B1EE1692F004D724E /* Fish-Eat-Fish World */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BDA56D9A1EE1692F004D724E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDC89D411EE2688C008E3785 /* OceanScene2.sks in Resources */,
+				BD2CF68C1EE26F0B007A1387 /* OceanFloorTileSet2.sks in Resources */,
+				BDE4A0361EE264FD00A13E57 /* OceanFloorTileSet.sks in Resources */,
+				BDA56DB11EE16930004D724E /* Main.storyboard in Resources */,
+				BDA56DB31EE16930004D724E /* Assets.xcassets in Resources */,
+				BDA56DB61EE16930004D724E /* LaunchScreen.storyboard in Resources */,
+				BDBC79AB1EE27254002512E9 /* OceanScene4.sks in Resources */,
+				BDE4A0371EE264FD00A13E57 /* Assets.xcassets in Resources */,
+				BDE4A0391EE2659B00A13E57 /* OceanScene1.sks in Resources */,
+				BD2CF68A1EE26EA8007A1387 /* OceanScene3.sks in Resources */,
+				BD826E7E1EE2669000E45308 /* OceanWaterTileSet.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BDA56D981EE1692F004D724E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD2A762D1EE3FB2500356490 /* Constants.m in Sources */,
+				BDA56DBF1EE17549004D724E /* UIColor+FishColorSchemes.m in Sources */,
+				BD2A76251EE3EBF000356490 /* Fish+HelperMethods.m in Sources */,
+				BD5AC2A31EE548C400EB093F /* InputControlType.m in Sources */,
+				BD66068D1EE6524F00CB1C7E /* BackgroundSelectionController.m in Sources */,
+				BDA56DAE1EE16930004D724E /* GameViewController.m in Sources */,
+				BDA56DA41EE16930004D724E /* AppDelegate.m in Sources */,
+				BD5AC29E1EE4C64F00EB093F /* InputControlSelectionController.m in Sources */,
+				BD38EDAC1EE19CCA009C235F /* Fish.m in Sources */,
+				BDA56DAB1EE16930004D724E /* GameScene.m in Sources */,
+				BD5AC2A91EE560F600EB093F /* GameConfigurationController.m in Sources */,
+				BDA56DC21EE175D4004D724E /* UIColor+SpecialColorSchemes.m in Sources */,
+				BD2A762B1EE3F51000356490 /* RandomPointGenerator.m in Sources */,
+				BDA56DA11EE16930004D724E /* main.m in Sources */,
+				BD5AC2A61EE5505B00EB093F /* FishSelectionController.m in Sources */,
+				BD38EDA91EE199F8009C235F /* TextureAtlasManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BDA56DAF1EE16930004D724E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDA56DB01EE16930004D724E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BDA56DB41EE16930004D724E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDA56DB51EE16930004D724E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BDA56DB81EE16930004D724E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BDA56DB91EE16930004D724E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BDA56DBB1EE16930004D724E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = T9J39WJJ9G;
+				INFOPLIST_FILE = "Fish-Eat-Fish World/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AlexMakedonski.Fish-Eat-Fish-World";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BDA56DBC1EE16930004D724E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = T9J39WJJ9G;
+				INFOPLIST_FILE = "Fish-Eat-Fish World/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AlexMakedonski.Fish-Eat-Fish-World";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BDA56D971EE1692F004D724E /* Build configuration list for PBXProject "Fish-Eat-Fish World" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDA56DB81EE16930004D724E /* Debug */,
+				BDA56DB91EE16930004D724E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BDA56DBA1EE16930004D724E /* Build configuration list for PBXNativeTarget "Fish-Eat-Fish World" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDA56DBB1EE16930004D724E /* Debug */,
+				BDA56DBC1EE16930004D724E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BDA56D941EE1692F004D724E /* Project object */;
+}
