@@ -147,6 +147,192 @@ NSString* const SandMiddleStarFish = @"";
 NSString* const SandMiddleSeaShell = @"";
 
 
+/** String Constants for Collectibles Texture Names **/
+
+ NSString* const Drill = @"";
+ NSString* const Sander  = @"";
+ NSString* const Item3  = @"";
+ NSString* const Wrench  = @"";
+ NSString* const Item4Bolt  = @"";
+
+
+ NSString* const Scraper  = @"";
+ NSString* const DoubleWrench  = @"";
+ NSString* const Clamp  = @"";
+ NSString* const Pliers  = @"";
+ NSString* const Hammer  = @"";
+
+ NSString* const PaintBrush  = @"";
+ NSString* const Item12  = @"";
+ NSString* const Item13  = @"";
+ NSString* const PaintRollerBrush  = @"";
+ NSString* const PaintScraper  = @"";
+
+ NSString* const Saw  = @"";
+ NSString* const Item17  = @"";
+ NSString* const Screw  = @"";
+ NSString* const Nail  = @"";
+ NSString* const Axe  = @""; //Item20
+
+ NSString* const Pickaxe  = @"";
+ NSString* const Shovel  = @"";
+ NSString* const DoubleSidedHammer  = @"";
+ NSString* const Pencil  = @"";
+ NSString* const BallpointPen  = @""; //Item25
+
+ NSString* const Marker  = @"";
+NSString* const FountainPenRed = @"";
+ NSString* const FountainPenBlue  = @"";
+ NSString* const InkPenWithFeather  = @"";
+ NSString* const Stamper  = @""; //Item25
+
+ NSString* const Item26  = @"";
+ NSString* const Item27  = @"";
+ NSString* const Item28  = @"";
+ NSString* const Item29  = @"";
+ NSString* const Seal  = @""; //Item30
+
+ NSString* const Palette  = @"";
+ NSString* const OpenBookWithBlueCover  = @"";
+ NSString* const OpenBookWithRedCover  = @"";
+ NSString* const ClosedBookWithYellowCover  = @"";
+ NSString* const ClosedBookWithRedCover  = @""; //Item35
+
+
+ NSString* const Folder = @"";
+ NSString* const Ladder = @"";
+ NSString* const Clipboard = @"";
+ NSString* const Item39  = @"";
+ NSString* const Item40  = @""; //Item40
+
+ NSString* const Item41  = @"";
+ NSString* const Item42  = @"";
+ NSString* const Item43  = @"";
+ NSString* const Item44 = @"";
+ NSString* const Item45 = @""; //Item45
+
+ NSString* const Item46 = @"";
+ NSString* const Item47 = @"";
+ NSString* const Flashlight = @"";
+ NSString* const Item49 = @"";
+ NSString* const Item50 = @""; //Item50
+
+ NSString* const Item51  = @"";
+ NSString* const Item52 = @"";
+ NSString* const Item53 = @"";
+ NSString* const Item54 = @"";
+ NSString* const Item55 = @""; //Item55
+
+ NSString* const Item56 = @"";
+ NSString* const Item57 = @"";
+ NSString* const Item58 = @"";
+ NSString* const Item59 = @"";
+ NSString* const Item60 = @""; //Item60
+
+ NSString* const Item61 = @"";
+ NSString* const Item62 = @"";
+ NSString* const Item63 = @"";
+ NSString* const Item64 = @"";
+ NSString* const Item65  = @""; //Item65
+
+ NSString* const Item66 = @"";
+ NSString* const Item67 = @"";
+ NSString* const Item68 = @"";
+ NSString* const Item69 = @"";
+ NSString* const Item70 = @""; //Item65
+
+ NSString* const Item71 = @"";
+ NSString* const Item72 = @"";
+ NSString* const Item73 = @"";
+ NSString* const Item74 = @"";
+ NSString* const Item75 = @""; //Item75
+
+ NSString* const Item76 = @"";
+ NSString* const Item77 = @"";
+ NSString* const Item78 = @"";
+ NSString* const Item79 = @"";
+ NSString* const Item80 = @""; //Item80
+
+ NSString* const Item81 = @"";
+ NSString* const Item82 = @"";
+ NSString* const Item83 = @"";
+ NSString* const Item84 = @"";
+ NSString* const Item85 = @""; //Item85
+
+ NSString* const Item86 = @"";
+ NSString* const Item87 = @"";
+ NSString* const Item88 = @"";
+ NSString* const Item89 = @"";
+ NSString* const Item90 = @""; //Item90
+
+ NSString* const Item91 = @"";
+ NSString* const Item92 = @"";
+ NSString* const Item93 = @"";
+ NSString* const Item94 = @"";
+ NSString* const Item95 = @""; //Item95
+
+ NSString* const Item96 = @"";
+ NSString* const Item97 = @"";
+ NSString* const Item98 = @"";
+ NSString* const Item99 = @"";
+ NSString* const Item100 = @""; //Item100
+
+ NSString* const Item101 = @"";
+ NSString* const Item102 = @"";
+ NSString* const Item103 = @"";
+ NSString* const Item104 = @"";
+ NSString* const Item105 = @""; //Item105
+
+ NSString* const Item106 = @"";
+ NSString* const Item107 = @"";
+ NSString* const Item108 = @"";
+ NSString* const Item109 = @"";
+ NSString* const Item110 = @""; //Item110
+
+ NSString* const Item111 = @"";
+ NSString* const Item112 = @"";
+ NSString* const Item113 = @"";
+ NSString* const Item114 = @"";
+ NSString* const Item115 = @""; //Item115
+
+ NSString* const Item116 = @"";
+ NSString* const Item117 = @"";
+ NSString* const Item118 = @"";
+ NSString* const Item119 = @"";
+ NSString* const Item120 = @""; //Item120
+
+
+ NSString* const Item121 = @"";
+ NSString* const Item122 = @"";
+ NSString* const Item123 = @"";
+ NSString* const Item124 = @"";
+ NSString* const Item125 = @""; //Item115
+
+ NSString* const Item126 = @"";
+ NSString* const Item127 = @"";
+ NSString* const Item128 = @"";
+ NSString* const Item129 = @"";
+ NSString* const Item130 = @""; //Item130
+
+ NSString* const Item141 = @"";
+ NSString* const Item142 = @"";
+ NSString* const Item143 = @"";
+ NSString* const Item144 = @"";
+ NSString* const Item145 = @""; //Item145
+
+ NSString* const Item146;
+ NSString* const Item147 = @"";
+ NSString* const Item148 = @"";
+ NSString* const Item149 = @"";
+ NSString* const Item150 = @""; //Item150
+
+ NSString* const Item161 = @"";
+ NSString* const Item162 = @"";
+ NSString* const Item163 = @"";
+ 
+
+
+
 
 /** Ground Tiles **/
 
@@ -195,6 +381,7 @@ NSString* const SandMiddleSeaShell = @"";
     SKTextureAtlas* _rocksAtlas;
     SKTextureAtlas* _sandAtlas;
     SKTextureAtlas* _waterAtlas;
+    SKTextureAtlas* _collectiblesAtlas;
 
 
 + (id) sharedManager{
@@ -225,10 +412,14 @@ NSString* const SandMiddleSeaShell = @"";
         _rocksAtlas = [SKTextureAtlas atlasNamed:@"Rocks.atlas"];
         _sandAtlas = [SKTextureAtlas atlasNamed:@"Sand.atlas"];
         _waterAtlas = [SKTextureAtlas atlasNamed:@"Water.atlas"];
-        
+        _collectiblesAtlas = [SKTextureAtlas atlasNamed:@"Collectibles.atlas"];
     }
     
     return self;
+}
+
+- (SKTexture*) getCollectibleTextureWithName: (NSString*) textureName{
+    return [_collectiblesAtlas textureNamed:textureName];
 }
 
 - (SKTexture*) getBlowfishTextureWithName:(NSString*)textureName{

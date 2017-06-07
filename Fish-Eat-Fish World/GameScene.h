@@ -10,7 +10,7 @@
 #import <GameplayKit/GameplayKit.h>
 #import "Fish.h"
 
-@interface GameScene : SKScene
+@interface GameScene : SKScene<SKPhysicsContactDelegate>
 
     @property (nonatomic) NSMutableDictionary<NSString*, GKGraph *> *graphs;
 

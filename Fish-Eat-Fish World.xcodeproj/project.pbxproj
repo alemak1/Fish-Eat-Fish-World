@@ -14,6 +14,7 @@
 		BD2CF68C1EE26F0B007A1387 /* OceanFloorTileSet2.sks in Resources */ = {isa = PBXBuildFile; fileRef = BD2CF68B1EE26F0B007A1387 /* OceanFloorTileSet2.sks */; };
 		BD38EDA91EE199F8009C235F /* TextureAtlasManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BD38EDA81EE199F8009C235F /* TextureAtlasManager.m */; };
 		BD38EDAC1EE19CCA009C235F /* Fish.m in Sources */ = {isa = PBXBuildFile; fileRef = BD38EDAB1EE19CCA009C235F /* Fish.m */; };
+		BD4932F91EE7E58E006C8B55 /* Collectibles.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4932F81EE7E58E006C8B55 /* Collectibles.m */; };
 		BD5AC29E1EE4C64F00EB093F /* InputControlSelectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5AC29D1EE4C64F00EB093F /* InputControlSelectionController.m */; };
 		BD5AC2A31EE548C400EB093F /* InputControlType.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5AC2A21EE548C400EB093F /* InputControlType.m */; };
 		BD5AC2A61EE5505B00EB093F /* FishSelectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5AC2A51EE5505B00EB093F /* FishSelectionController.m */; };
@@ -29,6 +30,9 @@
 		BDA56DB61EE16930004D724E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDA56DB41EE16930004D724E /* LaunchScreen.storyboard */; };
 		BDA56DBF1EE17549004D724E /* UIColor+FishColorSchemes.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA56DBE1EE17549004D724E /* UIColor+FishColorSchemes.m */; };
 		BDA56DC21EE175D4004D724E /* UIColor+SpecialColorSchemes.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA56DC11EE175D4004D724E /* UIColor+SpecialColorSchemes.m */; };
+		BDB0303C1EE8359200E79F74 /* GameScene+SKPhysicsContactDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB0303B1EE8359200E79F74 /* GameScene+SKPhysicsContactDelegate.m */; };
+		BDB030401EE8385E00E79F74 /* CollisionConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB0303F1EE8385E00E79F74 /* CollisionConfiguration.m */; };
+		BDB030431EE83CC200E79F74 /* CollisionSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB030421EE83CC200E79F74 /* CollisionSettings.m */; };
 		BDBC79AB1EE27254002512E9 /* OceanScene4.sks in Resources */ = {isa = PBXBuildFile; fileRef = BDBC79AA1EE27254002512E9 /* OceanScene4.sks */; };
 		BDC89D411EE2688C008E3785 /* OceanScene2.sks in Resources */ = {isa = PBXBuildFile; fileRef = BDC89D401EE2688C008E3785 /* OceanScene2.sks */; };
 		BDE4A0361EE264FD00A13E57 /* OceanFloorTileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = BDE4A0341EE264FD00A13E57 /* OceanFloorTileSet.sks */; };
@@ -52,6 +56,8 @@
 		BD38EDA81EE199F8009C235F /* TextureAtlasManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextureAtlasManager.m; sourceTree = "<group>"; };
 		BD38EDAB1EE19CCA009C235F /* Fish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fish.m; sourceTree = "<group>"; };
 		BD38EDAD1EE19CD3009C235F /* Fish.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fish.h; sourceTree = "<group>"; };
+		BD4932F71EE7E57B006C8B55 /* Collectibles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Collectibles.h; sourceTree = "<group>"; };
+		BD4932F81EE7E58E006C8B55 /* Collectibles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Collectibles.m; sourceTree = "<group>"; };
 		BD5AC29D1EE4C64F00EB093F /* InputControlSelectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputControlSelectionController.m; sourceTree = "<group>"; };
 		BD5AC29F1EE4C66800EB093F /* InputControlSelectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputControlSelectionController.h; sourceTree = "<group>"; };
 		BD5AC2A11EE5437C00EB093F /* InputControlType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputControlType.h; sourceTree = "<group>"; };
@@ -80,6 +86,12 @@
 		BDA56DBE1EE17549004D724E /* UIColor+FishColorSchemes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FishColorSchemes.m"; sourceTree = "<group>"; };
 		BDA56DC01EE17587004D724E /* UIColor+SpecialColorSchemes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+SpecialColorSchemes.h"; sourceTree = "<group>"; };
 		BDA56DC11EE175D4004D724E /* UIColor+SpecialColorSchemes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SpecialColorSchemes.m"; sourceTree = "<group>"; };
+		BDB0303A1EE8356600E79F74 /* GameScene+SKPhysicsContactDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GameScene+SKPhysicsContactDelegate.h"; sourceTree = "<group>"; };
+		BDB0303B1EE8359200E79F74 /* GameScene+SKPhysicsContactDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GameScene+SKPhysicsContactDelegate.m"; sourceTree = "<group>"; };
+		BDB0303E1EE8382000E79F74 /* CollisionConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollisionConfiguration.h; sourceTree = "<group>"; };
+		BDB0303F1EE8385E00E79F74 /* CollisionConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollisionConfiguration.m; sourceTree = "<group>"; };
+		BDB030411EE83A1500E79F74 /* CollisionSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollisionSettings.h; sourceTree = "<group>"; };
+		BDB030421EE83CC200E79F74 /* CollisionSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollisionSettings.m; sourceTree = "<group>"; };
 		BDBC79AA1EE27254002512E9 /* OceanScene4.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = OceanScene4.sks; sourceTree = "<group>"; };
 		BDC89D401EE2688C008E3785 /* OceanScene2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = OceanScene2.sks; sourceTree = "<group>"; };
 		BDE4A0341EE264FD00A13E57 /* OceanFloorTileSet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = OceanFloorTileSet.sks; sourceTree = "<group>"; };
@@ -112,9 +124,19 @@
 			name = Fish;
 			sourceTree = "<group>";
 		};
+		BD4932F61EE7DD4F006C8B55 /* Collectibles */ = {
+			isa = PBXGroup;
+			children = (
+				BD4932F71EE7E57B006C8B55 /* Collectibles.h */,
+				BD4932F81EE7E58E006C8B55 /* Collectibles.m */,
+			);
+			name = Collectibles;
+			sourceTree = "<group>";
+		};
 		BD5AC2A01EE4C6D200EB093F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				BDB0303D1EE8373400E79F74 /* GameScene */,
 				BD6606901EE6527800CB1C7E /* FishSelectionController */,
 				BD66068F1EE6526300CB1C7E /* InputControlSelectionController */,
 				BD66068E1EE6525600CB1C7E /* BackgroundSelectionController */,
@@ -181,13 +203,12 @@
 		BDA56D9E1EE16930004D724E /* Fish-Eat-Fish World */ = {
 			isa = PBXGroup;
 			children = (
+				BD4932F61EE7DD4F006C8B55 /* Collectibles */,
 				BD5AC2A01EE4C6D200EB093F /* ViewControllers */,
 				BD38EDAA1EE19CB4009C235F /* Fish */,
 				BDA56DC51EE1947D004D724E /* GameUtils */,
 				BDA56DA21EE16930004D724E /* AppDelegate.h */,
 				BDA56DA31EE16930004D724E /* AppDelegate.m */,
-				BDA56DA91EE16930004D724E /* GameScene.h */,
-				BDA56DAA1EE16930004D724E /* GameScene.m */,
 				BDA56DAC1EE16930004D724E /* GameViewController.h */,
 				BDA56DAD1EE16930004D724E /* GameViewController.m */,
 				BDA56DAF1EE16930004D724E /* Main.storyboard */,
@@ -222,6 +243,21 @@
 				BD2A762E1EE3FB3100356490 /* Constants.h */,
 			);
 			name = GameUtils;
+			sourceTree = "<group>";
+		};
+		BDB0303D1EE8373400E79F74 /* GameScene */ = {
+			isa = PBXGroup;
+			children = (
+				BDB0303A1EE8356600E79F74 /* GameScene+SKPhysicsContactDelegate.h */,
+				BDB0303B1EE8359200E79F74 /* GameScene+SKPhysicsContactDelegate.m */,
+				BDA56DA91EE16930004D724E /* GameScene.h */,
+				BDA56DAA1EE16930004D724E /* GameScene.m */,
+				BDB0303E1EE8382000E79F74 /* CollisionConfiguration.h */,
+				BDB0303F1EE8385E00E79F74 /* CollisionConfiguration.m */,
+				BDB030411EE83A1500E79F74 /* CollisionSettings.h */,
+				BDB030421EE83CC200E79F74 /* CollisionSettings.m */,
+			);
+			name = GameScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,8 +340,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDB0303C1EE8359200E79F74 /* GameScene+SKPhysicsContactDelegate.m in Sources */,
 				BD2A762D1EE3FB2500356490 /* Constants.m in Sources */,
 				BDA56DBF1EE17549004D724E /* UIColor+FishColorSchemes.m in Sources */,
+				BDB030431EE83CC200E79F74 /* CollisionSettings.m in Sources */,
 				BD2A76251EE3EBF000356490 /* Fish+HelperMethods.m in Sources */,
 				BD5AC2A31EE548C400EB093F /* InputControlType.m in Sources */,
 				BD66068D1EE6524F00CB1C7E /* BackgroundSelectionController.m in Sources */,
@@ -317,6 +355,8 @@
 				BD5AC2A91EE560F600EB093F /* GameConfigurationController.m in Sources */,
 				BDA56DC21EE175D4004D724E /* UIColor+SpecialColorSchemes.m in Sources */,
 				BD2A762B1EE3F51000356490 /* RandomPointGenerator.m in Sources */,
+				BD4932F91EE7E58E006C8B55 /* Collectibles.m in Sources */,
+				BDB030401EE8385E00E79F74 /* CollisionConfiguration.m in Sources */,
 				BDA56DA11EE16930004D724E /* main.m in Sources */,
 				BD5AC2A61EE5505B00EB093F /* FishSelectionController.m in Sources */,
 				BD38EDA91EE199F8009C235F /* TextureAtlasManager.m in Sources */,

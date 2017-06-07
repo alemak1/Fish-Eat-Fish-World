@@ -37,7 +37,9 @@ SKTileMapNode * _oceanTileMap;
     //Set the anchor point for the scene node to the middle of the screen
     [self setAnchorPoint:CGPointMake(0.5, 0.5)];
     
-  
+    //Set the physics world contact delegate to the current game scene
+    [[self physicsWorld] setContactDelegate:self];
+    
     SKNode* backgroundNode = [[SKScene nodeWithFileNamed:@"OceanScene3"] childNodeWithName:@"RootNode"];
     
     if(backgroundNode != nil){
@@ -318,10 +320,12 @@ SKTileMapNode * _oceanTileMap;
     // Calculate time since last update
     CGFloat dt = currentTime - _lastUpdateTime;
     
+    /**
     vector_int2 playerPos = [self getGraphPositionFor:[_player position] forTileMap:_oceanTileMap];
     
     NSLog(@"The player's current graph position is x: %d, y: %d",playerPos.x,playerPos.y);
-   
+     **/
+    
     _lastUpdateTime = currentTime;
 }
 

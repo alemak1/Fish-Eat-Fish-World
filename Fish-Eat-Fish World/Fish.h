@@ -18,7 +18,7 @@
     //MARK: Properties
 
     @property FishColor fishColor;
-    @property FishOrientation fishOrientation;
+    @property (readonly) FishOrientation fishOrientation;
 
     //MARK: Fish Position and Velocity are derived properties whose underlying value lie with the sprite node and physics body, respectively; they have custom setters that access the underlying sprite node and physics body respectively
 

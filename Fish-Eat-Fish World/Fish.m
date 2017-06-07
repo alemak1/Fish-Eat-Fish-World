@@ -12,6 +12,7 @@
 #import "Fish.h"
 #import "Fish+HelperMethods.h"
 #import "TextureAtlasManager.h"
+#import "CollisionSettings.h"
 
 /** Class extension is used here to emulated private methods, which are forward declared ehre and encapsulated in the main implementation file **/
 @implementation Fish
@@ -57,12 +58,14 @@
     [fishPhysicsBody setCategoryBitMask:0];
     [fishPhysicsBody setCollisionBitMask:0];
     [fishPhysicsBody setContactTestBitMask:0];
+
     
     [self setPhysicsBody:fishPhysicsBody];
     
     
     [self registerPropertyObservers];
-
+    [self setFishVelocityViaPhysicsBody:CGVectorMake(0.00, 0.00)];
+    
     /** After assigning a texture to the sprite node, reset the scale of the sprite node **/
     [self setScale:scalingFactor];
     
@@ -125,6 +128,15 @@
     
 }
 
+- (FishOrientation)fishOrientation{
+    
+    SKPhysicsBody* playerPB = [self physicsBody];
+    
+    CGFloat horizontalVelocity = [playerPB velocity].dx;
+    
+    return (horizontalVelocity > 0) ? RIGHT:LEFT;
+    
+}
 
 /** Designated initializer has parameters for texture, color, and size **/
 
@@ -141,24 +153,24 @@
     
     NSUInteger kvObservingOptions = NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew;
     
-    [self addObserver:self forKeyPath:@"fishOrientation" options: kvObservingOptions context:fishContext];
     
-    NSLog(@"Finished registering observers for fish orientation");
+    [self addObserver:self forKeyPath:@"currentFishVelocity" options: kvObservingOptions context:nil];
+    
+    NSLog(@"Finished registering observers for currentFishVelocity");
 }
 
 
 - (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
     
-    NSLog(@"Some observed properties changed...");
+    NSLog(@"Some observed properties changed");
     
-    if(context == fishContext){
-        
-        if([keyPath isEqualToString:@"fishOrientation"]){
-            NSLog(@"The orientation of the fish changed.");
+    
+        if([keyPath isEqualToString:@"currentFishVelocity"]){
+            NSLog(@"The current velocity of the fish changed.");
             NSLog(@"%@", change);
             
             [self updatePlayerAnimations];
-        }
+        
         
     }
   
@@ -241,7 +253,7 @@
     NSInteger fishColor = [wrappedFishColor integerValue];
     
     NSNumber* wrappedOrientation = [aDecoder decodeObjectForKey:@"fishOrientation"];
-    NSInteger fishOrientation = [wrappedFishColor integerValue];
+    NSInteger fishOrientation = [wrappedOrientation integerValue];
     
     NSValue* wrappedPosition = [aDecoder decodeObjectForKey:@"fishPosition"];
     CGPoint fishPosition = [wrappedPosition CGPointValue];
@@ -265,7 +277,6 @@
     }
     
     self.fishColor = fishColor;
-    self.fishOrientation = fishOrientation;
     
     //TODO: Add a physics body and continue initializing the physics body with decoded velocity in addition to other default values (such as linear damping, affectedByGravity, etc.) ...
 
