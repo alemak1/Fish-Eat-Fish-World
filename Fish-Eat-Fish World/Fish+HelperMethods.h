@@ -12,12 +12,17 @@
 #import <SpriteKit/SpriteKit.h>
 #import "Fish.h"
 #import "FishColor.h"
+#import "CollisionConfiguration.h"
 
 @interface Fish(HelperMethods)
 
-+ (SKTexture*) getTextureForFishColor:(FishColor)fishColor andForFishOrientation: (FishOrientation)fishOrientation;;
++ (SKTexture*) getTextureForFishColor:(FishColor)fishColor andForFishOrientation: (FishOrientation)fishOrientation;
 
 + (SKTexture*) getRandomFishColorTexture;
+
++ (SKTexture*) getSkeletonTextureForFishColor: (FishColor)fishColor andForFishOrientation:(FishOrientation) fishOrientation;
+
++ (CollisionConfiguration*) getCollisionConfigurationForFishColor: (FishColor) fishColor;
 
 + (int) getRandomFishColor;
 

@@ -28,6 +28,7 @@
 - (SKTexture*) getSandTextureWithName: (NSString*) textureName;
 - (SKTexture*) getWaterTextureWithName: (NSString*) textureName;
 - (SKTexture*) getCollectibleTextureWithName: (NSString*) textureName;
+- (SKTexture*) getOrangePlantsTextureWithName: (NSString*)textureName;
 
 extern NSString* const GreenFishNormalTextureName;
 extern NSString* const GreenFishWithOutlineTextureName;

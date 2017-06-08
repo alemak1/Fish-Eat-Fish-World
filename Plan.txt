@@ -1,0 +1,9 @@
+
+
+//Define SpriteNode subclass for collectibles
+//Define entities and components to implement GKRuleSystem as well as GKAgent/Goal behavior
+//Define navigable area with mesh graph or tile node in order to implement pathfinding
+
+//Objectives (Mode1) get a set of collectible items lost at the bottom of the ocean
+	     (Mode2) avoid being eaten
+	     (Mode3) eat all enemy fish

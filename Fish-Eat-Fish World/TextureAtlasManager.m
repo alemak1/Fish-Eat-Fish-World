@@ -18,8 +18,8 @@
  NSString* const GreenFishBonyFullTextureName = @"fishTile_091";
  NSString* const GreenFishNormalTextureLeftName = @"greenFishNormal_left";
  NSString* const GreenFishWithOutlineTextureLeftName = @"greenFishOutline_left";
- NSString* const GreenFishBonyEmptyTextureLeftName = @"greenFishBonyEmpty_left";
- NSString* const GreenFishBonyFullTextureLeftName = @"greenFishBonyFull_left";
+ NSString* const GreenFishBonyEmptyTextureLeftName = @"deadGreenEmpty_left";
+ NSString* const GreenFishBonyFullTextureLeftName = @"deadGreenFull_left";
 
 
  NSString* const PinkFishNormalTextureName  = @"fishTile_074";
@@ -28,8 +28,8 @@
  NSString* const PinkFishBonyFullTextureName = @"fishTile_093";
  NSString* const PinkFishNormalTextureLeftName = @"pinkFishNormal_left";
  NSString* const PinkFishWithOutlineTextureLeftName = @"pinkFishOutline_left";
- NSString* const PinkFishBonyEmptyTextureLeftName = @"pinkFishBonyEmpty_left";
- NSString* const PinkFishBonyFullTextureLeftName = @"pinkFishBonyFull_left";
+ NSString* const PinkFishBonyEmptyTextureLeftName = @"deadPinkEmpty_left";
+ NSString* const PinkFishBonyFullTextureLeftName = @"deadPinkFull_left";
 
  NSString* const OrangeFishNormalTextureName  = @"fishTile_080";
  NSString* const OrangeFishWithOutlineTextureName  = @"fishTile_081";
@@ -37,8 +37,8 @@
  NSString* const OrangeFishBonyFullTextureName = @"fishTile_093";
  NSString* const OrangeFishNormalTextureLeftName = @"orangeFishNormal_left";
  NSString* const OrangeFishWithOutlineTextureLeftName = @"orangeFishOutline_left";
- NSString* const OrangeFishBonyEmptyTextureLeftName = @"orangeFishBonyEmpty_left";
- NSString* const OrangeFishBonyFullTextureLeftName = @"ornageFishBonyFull_left";
+ NSString* const OrangeFishBonyEmptyTextureLeftName = @"deadOrangeEmpty_left";
+ NSString* const OrangeFishBonyFullTextureLeftName = @"deadOrangeFull_left";
 
  NSString* const BlueFishNormalTextureName  = @"fishTile_076";
  NSString* const BlueFishWithOutlineTextureName  = @"fishTile_077";
@@ -46,8 +46,8 @@
  NSString* const BlueFishBonyFullTextureName  = @"fishTile_095";
  NSString* const BlueFishNormalTextureLeftName = @"blueFishNormal_left";
  NSString* const BlueFishWithOutlineTextureLeftName = @"blueFishOutlined_left";
- NSString* const BlueFishBonyEmptyTextureLeftName = @"blueFishBonyEmpty_left";
- NSString* const BlueFishBonyFullTextureLeftName = @"blueFishBonyFull_left";
+ NSString* const BlueFishBonyEmptyTextureLeftName = @"deadBlueEmpty_left";
+ NSString* const BlueFishBonyFullTextureLeftName = @"deadBlueFull_left";
 
 
  NSString* const RedFishNormalTextureName  = @"fishTile_078";
@@ -56,8 +56,8 @@
  NSString* const RedFishBonyFullTextureName = @"fishTile_097";
  NSString* const RedFishNormalTextureLeftName = @"redFishNormal_left";
  NSString* const RedFishWithOutlineTextureLeftName = @"redFishOutlined_left";
- NSString* const RedFishBonyEmptyTextureLeftName = @"redFishBonyEmpty_left";
- NSString* const RedFishBonyFullTextureLeftName = @"redFishBonyFull_left";
+ NSString* const RedFishBonyEmptyTextureLeftName = @"deadRedEmpty_left";
+ NSString* const RedFishBonyFullTextureLeftName = @"deadRedFull_left";
 
 
 
@@ -375,6 +375,7 @@ NSString* const FountainPenRed = @"";
     SKTextureAtlas* _bonyFishAtlas;
     SKTextureAtlas* _eelAtlas;
     SKTextureAtlas* _greenPlantsAtlas;
+    SKTextureAtlas* _orangePlantAtlas;
     SKTextureAtlas* _groundAtlas;
     SKTextureAtlas* _numbersAtlas;
     SKTextureAtlas* _purplePlantsAtlas;
@@ -382,6 +383,7 @@ NSString* const FountainPenRed = @"";
     SKTextureAtlas* _sandAtlas;
     SKTextureAtlas* _waterAtlas;
     SKTextureAtlas* _collectiblesAtlas;
+
 
 
 + (id) sharedManager{
@@ -413,6 +415,7 @@ NSString* const FountainPenRed = @"";
         _sandAtlas = [SKTextureAtlas atlasNamed:@"Sand.atlas"];
         _waterAtlas = [SKTextureAtlas atlasNamed:@"Water.atlas"];
         _collectiblesAtlas = [SKTextureAtlas atlasNamed:@"Collectibles.atlas"];
+        _orangePlantAtlas = [SKTextureAtlas atlasNamed:@"OrangePlant.atlas"];
     }
     
     return self;
@@ -446,6 +449,10 @@ NSString* const FountainPenRed = @"";
 
 - (SKTexture*) getGreenPlantsTextureWithName: (NSString*)textureName{
     return [_greenPlantsAtlas textureNamed:textureName];
+}
+
+- (SKTexture*) getOrangePlantsTextureWithName: (NSString*)textureName{
+    return [_orangePlantAtlas textureNamed:textureName];
 }
 
 - (SKTexture*) getNumbersTextureWithName: (NSString*)textureName{

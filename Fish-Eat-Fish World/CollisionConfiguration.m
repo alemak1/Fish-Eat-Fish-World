@@ -12,35 +12,67 @@
 
 @implementation CollisionConfiguration
 
-+ (CollisionConfiguration*) playerCollisionConfiguration{
-    static CollisionConfiguration* playerCollisionConfiguration = nil;
+/** Each colored fish, blow fish, colored plant, collectible, and barrier entity's collision properties can be accessed via static variables **/
+
++ (CollisionConfiguration*) greenFishCollisionConfiguration{
+    static CollisionConfiguration* greenFishCollisionConfiguration = nil;
     
-    if(playerCollisionConfiguration == nil){
-        playerCollisionConfiguration = [[CollisionConfiguration alloc] initWithCategoryBitmask:PLAYER_CATEGORY_BITMASK];
+    if(greenFishCollisionConfiguration == nil){
+        greenFishCollisionConfiguration = [[CollisionConfiguration alloc] initWithCategoryBitmask:GREEN_FISH_CATEGORY_BITMASK];
     }
     
-    return playerCollisionConfiguration;
+    return greenFishCollisionConfiguration;
 }
 
-+ (CollisionConfiguration*) enemyCollisionConfiguration{
-    static CollisionConfiguration* enemyCollisionConfiguration = nil;
++ (CollisionConfiguration*) pinkFishCollisionConfiguration{
+    static CollisionConfiguration* pinkFishCollisionConfiguration = nil;
     
-    if(enemyCollisionConfiguration == nil){
-        enemyCollisionConfiguration = [[CollisionConfiguration alloc] initWithCategoryBitmask:ENEMY_CATEGORY_BITMASK];
+    if(pinkFishCollisionConfiguration == nil){
+        pinkFishCollisionConfiguration = [[CollisionConfiguration alloc] initWithCategoryBitmask:PINK_FISH_CATEGORY_BITMASK];
     }
     
-    return enemyCollisionConfiguration;
+    return pinkFishCollisionConfiguration;
+}
+
++ (CollisionConfiguration*) redFishCollisionConfiguration{
+    static CollisionConfiguration* redFishCollisionConfiguration = nil;
+    
+    if(redFishCollisionConfiguration == nil){
+        redFishCollisionConfiguration = [[CollisionConfiguration alloc] initWithCategoryBitmask:RED_FISH_CATEGORY_BITMASK];
+    }
+    
+    return redFishCollisionConfiguration;
+}
+
++ (CollisionConfiguration*) blueFishCollisionConfiguration{
+    static CollisionConfiguration* blueFishCollisionConfiguration = nil;
+    
+    if(blueFishCollisionConfiguration == nil){
+        blueFishCollisionConfiguration = [[CollisionConfiguration alloc] initWithCategoryBitmask:BLUE_FISH_CATEGORY_BITMASK];
+    }
+    
+    return blueFishCollisionConfiguration;
+}
+
++ (CollisionConfiguration*) orangeFishCollisionConfiguration{
+    static CollisionConfiguration* orangeFishCollisionConfiguration = nil;
+    
+    if(orangeFishCollisionConfiguration == nil){
+        
+        orangeFishCollisionConfiguration = [[CollisionConfiguration alloc] initWithCategoryBitmask:ORANGE_FISH_CATEGORY_BITMASK];
+    }
+    
+    return orangeFishCollisionConfiguration;
 }
 
 + (CollisionConfiguration*) collectibleCollisionConfiguration{
-    static CollisionConfiguration* collectibleConfiguration = nil;
+    static CollisionConfiguration* collectibleCollisionConfiguration = nil;
     
-    if(collectibleConfiguration == nil){
-        
-        collectibleConfiguration = [[CollisionConfiguration alloc] initWithCategoryBitmask:COLLECTIBLE_CATEGORY_BITMASK];
+    if(collectibleCollisionConfiguration == nil){
+        collectibleCollisionConfiguration = [[CollisionConfiguration alloc] initWithCategoryBitmask:COLLECTIBLE_CATEGORY_BITMASK];
     }
     
-    return collectibleConfiguration;
+    return collectibleCollisionConfiguration;
 }
 
 + (CollisionConfiguration*) barrierCollisionConfiguration{
@@ -51,6 +83,46 @@
     }
     
     return barrierCollisionConfiguration;
+}
+
++ (CollisionConfiguration*) purplePlantCollisionConfiguration{
+    static CollisionConfiguration* purplePlantCollisionConfiguration = nil;
+    
+    if(purplePlantCollisionConfiguration == nil){
+        purplePlantCollisionConfiguration = [[CollisionConfiguration alloc] initWithCategoryBitmask:PURPLE_PLANT_CATEGORY_BITMASK];
+    }
+    
+    return purplePlantCollisionConfiguration;
+}
+
++ (CollisionConfiguration*) greenPlantCollisionConfiguration{
+    static CollisionConfiguration* greenPlantCollisionConfiguration = nil;
+    
+    if(greenPlantCollisionConfiguration == nil){
+        greenPlantCollisionConfiguration = [[CollisionConfiguration alloc] initWithCategoryBitmask:BARRIER_CATEGORY_BITMASK];
+    }
+    
+    return greenPlantCollisionConfiguration;
+}
+
++ (CollisionConfiguration*) eelCollisionConfiguration{
+    static CollisionConfiguration* eelCollisionConfiguration = nil;
+    
+    if(eelCollisionConfiguration == nil){
+        eelCollisionConfiguration = [[CollisionConfiguration alloc] initWithCategoryBitmask:EEL_CATEGORY_BITMASK];
+    }
+    
+    return eelCollisionConfiguration;
+}
+
++ (CollisionConfiguration*) orangePlantCollisionConfiguration{
+    static CollisionConfiguration* orangePlantCollisionConfiguration = nil;
+    
+    if(orangePlantCollisionConfiguration == nil){
+        orangePlantCollisionConfiguration = [[CollisionConfiguration alloc] initWithCategoryBitmask:ORANGE_PLANT_CATEGORY_BITMASK];
+    }
+    
+    return orangePlantCollisionConfiguration;
 }
 
 -(id) initWithCategoryBitmask: (enum CategoryBitmask)categoryBitmask{
@@ -75,27 +147,77 @@
 
 -(NSDictionary*) definedCollisions{
     return @{\
-    [NSNumber numberWithInteger:PLAYER_CATEGORY_BITMASK]:@[[NSNumber numberWithInteger:BARRIER_CATEGORY_BITMASK]],\
+    //Red Fish
+    [NSNumber numberWithInteger:RED_FISH_CATEGORY_BITMASK]:@[[NSNumber numberWithInteger:BARRIER_CATEGORY_BITMASK], [NSNumber numberWithInteger:GREEN_PLANT_CATEGORY_BITMASK], [NSNumber numberWithInteger:PURPLE_PLANT_CATEGORY_BITMASK],[NSNumber numberWithInteger:BLOWFISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:ORANGE_PLANT_CATEGORY_BITMASK]],\
     
-    [NSNumber numberWithInteger:ENEMY_CATEGORY_BITMASK]:@[[NSNumber numberWithInteger:PLAYER_CATEGORY_BITMASK],[NSNumber numberWithInteger:BARRIER_CATEGORY_BITMASK]],
+    //Blue Fish
+    [NSNumber numberWithInteger:BLUE_FISH_CATEGORY_BITMASK]:@[[NSNumber numberWithInteger:BARRIER_CATEGORY_BITMASK],[NSNumber numberWithInteger:GREEN_PLANT_CATEGORY_BITMASK], [NSNumber numberWithInteger:PURPLE_PLANT_CATEGORY_BITMASK],[NSNumber numberWithInteger:BLOWFISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:ORANGE_PLANT_CATEGORY_BITMASK]],
     
+    //Pink Fish
+    [NSNumber numberWithInteger:PINK_FISH_CATEGORY_BITMASK]:@[[NSNumber numberWithInteger:BARRIER_CATEGORY_BITMASK],[NSNumber numberWithInteger:GREEN_PLANT_CATEGORY_BITMASK], [NSNumber numberWithInteger:PURPLE_PLANT_CATEGORY_BITMASK],[NSNumber numberWithInteger:BLOWFISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:ORANGE_PLANT_CATEGORY_BITMASK]],
+    
+    //Orange Fish
+     [NSNumber numberWithInteger:ORANGE_FISH_CATEGORY_BITMASK]:@[[NSNumber numberWithInteger:BARRIER_CATEGORY_BITMASK],[NSNumber numberWithInteger:GREEN_PLANT_CATEGORY_BITMASK], [NSNumber numberWithInteger:PURPLE_PLANT_CATEGORY_BITMASK],[NSNumber numberWithInteger:BLOWFISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:ORANGE_PLANT_CATEGORY_BITMASK]],
+    
+    //Green Fish
+     [NSNumber numberWithInteger:GREEN_FISH_CATEGORY_BITMASK]:@[[NSNumber numberWithInteger:BARRIER_CATEGORY_BITMASK],[NSNumber numberWithInteger:GREEN_PLANT_CATEGORY_BITMASK], [NSNumber numberWithInteger:PURPLE_PLANT_CATEGORY_BITMASK],[NSNumber numberWithInteger:BLOWFISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:ORANGE_PLANT_CATEGORY_BITMASK]],
+    
+    //Eel
+    [NSNumber numberWithInteger:EEL_CATEGORY_BITMASK]:@[[NSNumber numberWithInteger:BARRIER_CATEGORY_BITMASK],[NSNumber numberWithInteger:GREEN_PLANT_CATEGORY_BITMASK], [NSNumber numberWithInteger:PURPLE_PLANT_CATEGORY_BITMASK],[NSNumber numberWithInteger:BLOWFISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:ORANGE_PLANT_CATEGORY_BITMASK]],
+    
+    //Collectibles
     [NSNumber numberWithInteger:COLLECTIBLE_CATEGORY_BITMASK]:@[[NSNumber numberWithInteger:BARRIER_CATEGORY_BITMASK]],
     
-    [NSNumber numberWithInteger:BARRIER_CATEGORY_BITMASK]: @[[NSNumber numberWithInteger:PLAYER_CATEGORY_BITMASK],[NSNumber numberWithInteger:ENEMY_CATEGORY_BITMASK],[NSNumber numberWithInteger:COLLECTIBLE_CATEGORY_BITMASK]]
+    //Green Plant
+    [NSNumber numberWithInteger:GREEN_PLANT_CATEGORY_BITMASK]: @[[NSNumber numberWithInteger:RED_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:GREEN_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:BLUE_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:PINK_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:ORANGE_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:BARRIER_CATEGORY_BITMASK],[NSNumber numberWithInteger:GREEN_PLANT_CATEGORY_BITMASK],[NSNumber numberWithInteger:PURPLE_PLANT_CATEGORY_BITMASK], [NSNumber numberWithInteger:BLOWFISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:ORANGE_PLANT_CATEGORY_BITMASK],[NSNumber numberWithInteger:EEL_CATEGORY_BITMASK]],
     
-                                        
+    //Purple Plant
+    [NSNumber numberWithInteger:PURPLE_PLANT_CATEGORY_BITMASK]: @[[NSNumber numberWithInteger:RED_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:GREEN_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:BLUE_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:PINK_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:ORANGE_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:BARRIER_CATEGORY_BITMASK],[NSNumber numberWithInteger:GREEN_PLANT_CATEGORY_BITMASK],[NSNumber numberWithInteger:PURPLE_PLANT_CATEGORY_BITMASK], [NSNumber numberWithInteger:BLOWFISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:ORANGE_PLANT_CATEGORY_BITMASK],[NSNumber numberWithInteger:EEL_CATEGORY_BITMASK]],
+    
+    //Blowfish
+      [NSNumber numberWithInteger:BLOWFISH_CATEGORY_BITMASK]: @[[NSNumber numberWithInteger:RED_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:GREEN_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:BLUE_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:PINK_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:ORANGE_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:BARRIER_CATEGORY_BITMASK],[NSNumber numberWithInteger:GREEN_PLANT_CATEGORY_BITMASK],[NSNumber numberWithInteger:PURPLE_PLANT_CATEGORY_BITMASK],[NSNumber numberWithInteger:BLOWFISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:ORANGE_PLANT_CATEGORY_BITMASK],[NSNumber numberWithInteger:EEL_CATEGORY_BITMASK]],
+    
+    //Barriers
+    [NSNumber numberWithInteger:BARRIER_CATEGORY_BITMASK]: @[[NSNumber numberWithInteger:RED_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:GREEN_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:BLUE_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:PINK_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:ORANGE_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:BLOWFISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:GREEN_PLANT_CATEGORY_BITMASK],[NSNumber numberWithInteger:PURPLE_PLANT_CATEGORY_BITMASK],[NSNumber numberWithInteger:BARRIER_CATEGORY_BITMASK],[NSNumber numberWithInteger:ORANGE_PLANT_CATEGORY_BITMASK],[NSNumber numberWithInteger:EEL_CATEGORY_BITMASK]]
+    
                                                                     };
 }
 
 -(NSDictionary*) definedContacts{
     return @{\
-             [NSNumber numberWithInteger:PLAYER_CATEGORY_BITMASK]:@[[NSNumber numberWithInteger:ENEMY_CATEGORY_BITMASK],[NSNumber numberWithInteger:COLLECTIBLE_CATEGORY_BITMASK], [NSNumber numberWithInteger:BARRIER_CATEGORY_BITMASK]],\
              
-             [NSNumber numberWithInteger:ENEMY_CATEGORY_BITMASK]:@[[NSNumber numberWithInteger:PLAYER_CATEGORY_BITMASK],[NSNumber numberWithInteger:ENEMY_CATEGORY_BITMASK],[NSNumber numberWithInteger:BARRIER_CATEGORY_BITMASK]],\
+             //Blowfish
+             [NSNumber numberWithInteger:BLOWFISH_CATEGORY_BITMASK]:@[[NSNumber numberWithInteger:RED_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:ORANGE_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:BLUE_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:GREEN_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:PINK_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:PURPLE_PLANT_CATEGORY_BITMASK],[NSNumber numberWithInteger:GREEN_PLANT_CATEGORY_BITMASK],[NSNumber numberWithInteger:BLOWFISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:COLLECTIBLE_CATEGORY_BITMASK], [NSNumber numberWithInteger:BARRIER_CATEGORY_BITMASK],[NSNumber numberWithInteger:EEL_CATEGORY_BITMASK],[NSNumber numberWithInteger:ORANGE_PLANT_CATEGORY_BITMASK]],\
              
-             [NSNumber numberWithInteger:COLLECTIBLE_CATEGORY_BITMASK]: @[[NSNumber numberWithInteger:PLAYER_CATEGORY_BITMASK]],\
+             //Eel
+             [NSNumber numberWithInteger:EEL_CATEGORY_BITMASK]:@[[NSNumber numberWithInteger:RED_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:ORANGE_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:BLUE_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:GREEN_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:PINK_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:PURPLE_PLANT_CATEGORY_BITMASK],[NSNumber numberWithInteger:GREEN_PLANT_CATEGORY_BITMASK],[NSNumber numberWithInteger:BLOWFISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:COLLECTIBLE_CATEGORY_BITMASK], [NSNumber numberWithInteger:BARRIER_CATEGORY_BITMASK],[NSNumber numberWithInteger:EEL_CATEGORY_BITMASK],[NSNumber numberWithInteger:ORANGE_PLANT_CATEGORY_BITMASK]],\
              
-             [NSNumber numberWithInteger:BARRIER_CATEGORY_BITMASK]: @[[NSNumber numberWithInteger:PLAYER_CATEGORY_BITMASK],[NSNumber numberWithInteger:ENEMY_CATEGORY_BITMASK]]
+             //Red Fish
+             [NSNumber numberWithInteger:RED_FISH_CATEGORY_BITMASK]:@[[NSNumber numberWithInteger:RED_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:ORANGE_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:BLUE_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:GREEN_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:PINK_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:PURPLE_PLANT_CATEGORY_BITMASK],[NSNumber numberWithInteger:GREEN_PLANT_CATEGORY_BITMASK],[NSNumber numberWithInteger:BLOWFISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:COLLECTIBLE_CATEGORY_BITMASK], [NSNumber numberWithInteger:BARRIER_CATEGORY_BITMASK],[NSNumber numberWithInteger:EEL_CATEGORY_BITMASK],[NSNumber numberWithInteger:ORANGE_PLANT_CATEGORY_BITMASK]],\
+             
+             //Blue Fish
+             [NSNumber numberWithInteger:BLUE_FISH_CATEGORY_BITMASK]:@[[NSNumber numberWithInteger:RED_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:ORANGE_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:BLUE_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:GREEN_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:PINK_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:PURPLE_PLANT_CATEGORY_BITMASK],[NSNumber numberWithInteger:GREEN_PLANT_CATEGORY_BITMASK],[NSNumber numberWithInteger:BLOWFISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:COLLECTIBLE_CATEGORY_BITMASK], [NSNumber numberWithInteger:BARRIER_CATEGORY_BITMASK],[NSNumber numberWithInteger:EEL_CATEGORY_BITMASK],[NSNumber numberWithInteger:ORANGE_PLANT_CATEGORY_BITMASK]],\
+             
+             //Green Fish
+             [NSNumber numberWithInteger:GREEN_FISH_CATEGORY_BITMASK]:@[[NSNumber numberWithInteger:RED_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:ORANGE_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:BLUE_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:GREEN_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:PINK_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:PURPLE_PLANT_CATEGORY_BITMASK],[NSNumber numberWithInteger:GREEN_PLANT_CATEGORY_BITMASK],[NSNumber numberWithInteger:BLOWFISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:COLLECTIBLE_CATEGORY_BITMASK], [NSNumber numberWithInteger:BARRIER_CATEGORY_BITMASK],[NSNumber numberWithInteger:EEL_CATEGORY_BITMASK],[NSNumber numberWithInteger:ORANGE_PLANT_CATEGORY_BITMASK]],\
+             
+             //Pink Fish
+             [NSNumber numberWithInteger:PINK_FISH_CATEGORY_BITMASK]:@[[NSNumber numberWithInteger:RED_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:ORANGE_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:BLUE_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:GREEN_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:PINK_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:PURPLE_PLANT_CATEGORY_BITMASK],[NSNumber numberWithInteger:GREEN_PLANT_CATEGORY_BITMASK],[NSNumber numberWithInteger:BLOWFISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:COLLECTIBLE_CATEGORY_BITMASK], [NSNumber numberWithInteger:BARRIER_CATEGORY_BITMASK],[NSNumber numberWithInteger:EEL_CATEGORY_BITMASK],[NSNumber numberWithInteger:ORANGE_PLANT_CATEGORY_BITMASK]],\
+             
+             //Orange Fish
+             [NSNumber numberWithInteger:ORANGE_FISH_CATEGORY_BITMASK]:@[[NSNumber numberWithInteger:RED_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:ORANGE_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:BLUE_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:GREEN_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:PINK_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:PURPLE_PLANT_CATEGORY_BITMASK],[NSNumber numberWithInteger:GREEN_PLANT_CATEGORY_BITMASK],[NSNumber numberWithInteger:BLOWFISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:COLLECTIBLE_CATEGORY_BITMASK], [NSNumber numberWithInteger:BARRIER_CATEGORY_BITMASK],[NSNumber numberWithInteger:EEL_CATEGORY_BITMASK],[NSNumber numberWithInteger:ORANGE_PLANT_CATEGORY_BITMASK]],\
+             
+             //Collectible
+             [NSNumber numberWithInteger:COLLECTIBLE_CATEGORY_BITMASK]:@[[NSNumber numberWithInteger:RED_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:GREEN_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:PINK_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:BLUE_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:ORANGE_FISH_CATEGORY_BITMASK]],\
+             
+             //Green Plant
+             [NSNumber numberWithInteger:GREEN_PLANT_CATEGORY_BITMASK]: @[[NSNumber numberWithInteger:RED_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:GREEN_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:BLUE_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:PINK_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:ORANGE_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:BLOWFISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:EEL_CATEGORY_BITMASK]],\
+             
+             //Purple Plant
+              [NSNumber numberWithInteger:PURPLE_PLANT_CATEGORY_BITMASK]: @[[NSNumber numberWithInteger:RED_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:GREEN_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:BLUE_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:PINK_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:ORANGE_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:BLOWFISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:EEL_CATEGORY_BITMASK]], \
+             
+             //Orange Plant
+             [NSNumber numberWithInteger:ORANGE_PLANT_CATEGORY_BITMASK]: @[[NSNumber numberWithInteger:RED_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:GREEN_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:BLUE_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:PINK_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:ORANGE_FISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:BLOWFISH_CATEGORY_BITMASK],[NSNumber numberWithInteger:EEL_CATEGORY_BITMASK]],
              
              };
 }

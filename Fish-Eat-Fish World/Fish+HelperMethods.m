@@ -94,4 +94,61 @@
     return fishTexture;
 }
 
++ (CollisionConfiguration*) getCollisionConfigurationForFishColor: (FishColor) fishColor{
+    
+    CollisionConfiguration* collisionConfiguration;
+    
+    switch (fishColor) {
+        case RED:
+            collisionConfiguration = [CollisionConfiguration redFishCollisionConfiguration];
+        case ORANGE:
+            collisionConfiguration = [CollisionConfiguration orangeFishCollisionConfiguration];
+        case BLUE:
+            collisionConfiguration = [CollisionConfiguration blueFishCollisionConfiguration];
+        case GREEN:
+            collisionConfiguration = [CollisionConfiguration greenFishCollisionConfiguration];
+        case PINK:
+            collisionConfiguration = [CollisionConfiguration pinkFishCollisionConfiguration];
+    }
+    
+    return collisionConfiguration;
+}
+
++ (SKTexture*) getSkeletonTextureForFishColor: (FishColor)fishColor andForFishOrientation:(FishOrientation) fishOrientation{
+    
+    
+    /** Get a reference to the shared texture atlas manager **/
+    TextureAtlasManager* textureAtlasManager = [TextureAtlasManager sharedManager];
+    
+    NSString* textureName;
+    SKTexture* fishTexture;
+    
+    switch(fishColor){
+        case ORANGE:
+            textureName = (fishOrientation == RIGHT) ? OrangeFishBonyEmptyTextureName : OrangeFishBonyEmptyTextureLeftName;
+            fishTexture = [textureAtlasManager getColoredFishTextureWithName:textureName];
+            break;
+        case RED:
+            textureName = (fishOrientation == RIGHT) ? RedFishBonyEmptyTextureName : RedFishBonyEmptyTextureLeftName;
+            fishTexture = [textureAtlasManager getColoredFishTextureWithName:textureName];
+            break;
+        case BLUE:
+            textureName = (fishOrientation == RIGHT) ? BlueFishBonyEmptyTextureName : BlueFishBonyEmptyTextureLeftName;
+            fishTexture = [textureAtlasManager getColoredFishTextureWithName:textureName];
+            break;
+        case PINK:
+            textureName = (fishOrientation == RIGHT) ? PinkFishBonyEmptyTextureName : PinkFishBonyEmptyTextureLeftName;
+            fishTexture = [textureAtlasManager getColoredFishTextureWithName:textureName];
+            break;
+        case GREEN:
+            textureName = (fishOrientation == RIGHT) ? GreenFishBonyEmptyTextureName : GreenFishBonyEmptyTextureLeftName;
+            fishTexture = [textureAtlasManager getColoredFishTextureWithName: textureName];
+            break;
+    }
+    
+    return fishTexture;
+    
+}
+
+
 @end

@@ -17,16 +17,36 @@
 
 
 enum CategoryBitmask{
-    PLAYER_CATEGORY_BITMASK = 0b0 << 0,
-    ENEMY_CATEGORY_BITMASK = 0b1 << 0,
-    COLLECTIBLE_CATEGORY_BITMASK = 0b1 << 1,
-    BARRIER_CATEGORY_BITMASK = 0b1 << 2
+    RED_FISH_CATEGORY_BITMASK = 0b0 << 1,
+    GREEN_FISH_CATEGORY_BITMASK = 0b1 << 2,
+    PINK_FISH_CATEGORY_BITMASK = 0b1 << 3,
+    ORANGE_FISH_CATEGORY_BITMASK = 0b1 << 4,
+    BLUE_FISH_CATEGORY_BITMASK = 0b1 << 5,
+    BLOWFISH_CATEGORY_BITMASK = 0b1 << 6,
+    GREEN_PLANT_CATEGORY_BITMASK = 0b1 << 7,
+    PURPLE_PLANT_CATEGORY_BITMASK = 0b1 << 8,
+    COLLECTIBLE_CATEGORY_BITMASK = 0b1 << 9,
+    BARRIER_CATEGORY_BITMASK = 0b1 << 10,
+    EEL_CATEGORY_BITMASK = 0b1 << 11,
+    ORANGE_PLANT_CATEGORY_BITMASK = 0b1 << 12
+
 };
 
-+ (CollisionConfiguration*) playerCollisionConfiguration;
-+ (CollisionConfiguration*) enemyCollisionConfiguration;
++ (CollisionConfiguration*) redFishCollisionConfiguration;
++ (CollisionConfiguration*) greenFishCollisionConfiguration;
++ (CollisionConfiguration*) pinkFishCollisionConfiguration;
++ (CollisionConfiguration*) orangeFishCollisionConfiguration;
++ (CollisionConfiguration*) blueFishCollisionConfiguration;
++ (CollisionConfiguration*) blowFishCollisionConfiguration;
++ (CollisionConfiguration*) greenPlantCollisionConfiguration;
++ (CollisionConfiguration*) purplePlantCollisionConfiguration;
 + (CollisionConfiguration*) collectibleCollisionConfiguration;
 + (CollisionConfiguration*) barrierCollisionConfiguration;
++ (CollisionConfiguration*) eelCollisionConfiguration;
++ (CollisionConfiguration*) orangePlantCollisionConfiguration;
+
+
+
 
 
 -(id) initWithCategoryBitmask: (enum CategoryBitmask)categoryBitmask;

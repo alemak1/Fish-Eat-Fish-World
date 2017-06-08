@@ -55,9 +55,12 @@
     
     //Bitmasks for Collision Events
     
-    [fishPhysicsBody setCategoryBitMask:0];
-    [fishPhysicsBody setCollisionBitMask:0];
-    [fishPhysicsBody setContactTestBitMask:0];
+    CollisionConfiguration* collisionConfiguration = [Fish getCollisionConfigurationForFishColor:randomFishColor];
+    
+    [fishPhysicsBody setCategoryBitMask:[collisionConfiguration categoryBitMask]];
+    [fishPhysicsBody setCollisionBitMask:[collisionConfiguration collisionBitMask]];
+    [fishPhysicsBody setContactTestBitMask:[collisionConfiguration contactBitMask]];
+    
 
     
     [self setPhysicsBody:fishPhysicsBody];
@@ -109,9 +112,11 @@
     
     //Bitmasks for Collision Events
     
-    [fishPhysicsBody setCategoryBitMask:0];
-    [fishPhysicsBody setCollisionBitMask:0];
-    [fishPhysicsBody setContactTestBitMask:0];
+    CollisionConfiguration* collisionConfiguration = [Fish getCollisionConfigurationForFishColor:fishColor];
+    
+    [fishPhysicsBody setCategoryBitMask:[collisionConfiguration categoryBitMask]];
+    [fishPhysicsBody setCollisionBitMask:[collisionConfiguration collisionBitMask]];
+    [fishPhysicsBody setContactTestBitMask:[collisionConfiguration contactBitMask]];
     
     [self setPhysicsBody:fishPhysicsBody];
     
