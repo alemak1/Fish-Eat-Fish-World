@@ -120,7 +120,7 @@ SKTileMapNode * _oceanTileMap;
      
     **/
     
-    _player = [[Fish alloc] initWithFishColor:BLUE andWithInitialPosition:bluePos andWithScaleFactor:scalingFactor];
+    _player = [[Fish alloc] initWithFishColor:BLUE andWithInitialPosition:bluePos andWithScaleFactor:scalingFactor andWithPlayerStatus:YES];
     [_worldNode addChild:_player];
     
   

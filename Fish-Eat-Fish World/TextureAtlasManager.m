@@ -52,7 +52,7 @@
 
  NSString* const RedFishNormalTextureName  = @"fishTile_078";
  NSString* const RedFishWithOutlineTextureName = @"fishTile_079";
- NSString* const RedFishBondyEmptyTextureName  = @"fishTile_096";
+ NSString* const RedFishBonyEmptyTextureName  = @"fishTile_096";
  NSString* const RedFishBonyFullTextureName = @"fishTile_097";
  NSString* const RedFishNormalTextureLeftName = @"redFishNormal_left";
  NSString* const RedFishWithOutlineTextureLeftName = @"redFishOutlined_left";

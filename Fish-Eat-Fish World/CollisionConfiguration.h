@@ -28,7 +28,8 @@ enum CategoryBitmask{
     COLLECTIBLE_CATEGORY_BITMASK = 0b1 << 9,
     BARRIER_CATEGORY_BITMASK = 0b1 << 10,
     EEL_CATEGORY_BITMASK = 0b1 << 11,
-    ORANGE_PLANT_CATEGORY_BITMASK = 0b1 << 12
+    ORANGE_PLANT_CATEGORY_BITMASK = 0b1 << 12,
+    PLAYER_CATEGORY_BITMASK = 0b1 << 13
 
 };
 
@@ -44,12 +45,16 @@ enum CategoryBitmask{
 + (CollisionConfiguration*) barrierCollisionConfiguration;
 + (CollisionConfiguration*) eelCollisionConfiguration;
 + (CollisionConfiguration*) orangePlantCollisionConfiguration;
++ (CollisionConfiguration*) playerCollisionConfiguration;
 
 
 
 
 
 -(id) initWithCategoryBitmask: (enum CategoryBitmask)categoryBitmask;
+
++ (void) addPlayerCategoryBitMaskFor:(CollisionConfiguration*)collisionConfiguration;
+
 
 @property enum CategoryBitmask categoryBitMask;
 

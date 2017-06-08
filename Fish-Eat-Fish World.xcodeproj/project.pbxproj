@@ -13,6 +13,7 @@
 		BD2CF68A1EE26EA8007A1387 /* OceanScene3.sks in Resources */ = {isa = PBXBuildFile; fileRef = BD2CF6891EE26EA8007A1387 /* OceanScene3.sks */; };
 		BD2CF68C1EE26F0B007A1387 /* OceanFloorTileSet2.sks in Resources */ = {isa = PBXBuildFile; fileRef = BD2CF68B1EE26F0B007A1387 /* OceanFloorTileSet2.sks */; };
 		BD312A431EE8FDB900960B58 /* Plant.m in Sources */ = {isa = PBXBuildFile; fileRef = BD312A421EE8FDB900960B58 /* Plant.m */; };
+		BD312A491EE91FC100960B58 /* SKPhysicsContact+HelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = BD312A481EE91FC100960B58 /* SKPhysicsContact+HelperMethods.m */; };
 		BD38EDA91EE199F8009C235F /* TextureAtlasManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BD38EDA81EE199F8009C235F /* TextureAtlasManager.m */; };
 		BD38EDAC1EE19CCA009C235F /* Fish.m in Sources */ = {isa = PBXBuildFile; fileRef = BD38EDAB1EE19CCA009C235F /* Fish.m */; };
 		BD4932F91EE7E58E006C8B55 /* Collectibles.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4932F81EE7E58E006C8B55 /* Collectibles.m */; };
@@ -55,6 +56,8 @@
 		BD2CF68B1EE26F0B007A1387 /* OceanFloorTileSet2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = OceanFloorTileSet2.sks; sourceTree = "<group>"; };
 		BD312A411EE8FD9500960B58 /* Plant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Plant.h; sourceTree = "<group>"; };
 		BD312A421EE8FDB900960B58 /* Plant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plant.m; sourceTree = "<group>"; };
+		BD312A471EE91FC100960B58 /* SKPhysicsContact+HelperMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKPhysicsContact+HelperMethods.h"; sourceTree = "<group>"; };
+		BD312A481EE91FC100960B58 /* SKPhysicsContact+HelperMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKPhysicsContact+HelperMethods.m"; sourceTree = "<group>"; };
 		BD38EDA71EE199DC009C235F /* TextureAtlasManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextureAtlasManager.h; sourceTree = "<group>"; };
 		BD38EDA81EE199F8009C235F /* TextureAtlasManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextureAtlasManager.m; sourceTree = "<group>"; };
 		BD38EDAB1EE19CCA009C235F /* Fish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fish.m; sourceTree = "<group>"; };
@@ -120,6 +123,8 @@
 				BDB0303F1EE8385E00E79F74 /* CollisionConfiguration.m */,
 				BDB030411EE83A1500E79F74 /* CollisionSettings.h */,
 				BDB030421EE83CC200E79F74 /* CollisionSettings.m */,
+				BD312A471EE91FC100960B58 /* SKPhysicsContact+HelperMethods.h */,
+				BD312A481EE91FC100960B58 /* SKPhysicsContact+HelperMethods.m */,
 			);
 			name = CollisionPropsUtils;
 			sourceTree = "<group>";
@@ -405,6 +410,7 @@
 				BDB030401EE8385E00E79F74 /* CollisionConfiguration.m in Sources */,
 				BDA56DA11EE16930004D724E /* main.m in Sources */,
 				BD5AC2A61EE5505B00EB093F /* FishSelectionController.m in Sources */,
+				BD312A491EE91FC100960B58 /* SKPhysicsContact+HelperMethods.m in Sources */,
 				BD38EDA91EE199F8009C235F /* TextureAtlasManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Fish-Eat-Fish World/Fish.m"
-            timestampString = "518542031.446862"
+            timestampString = "518590283.866644"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "-initWithFishColor:andWithInitialPosition:andWithScaleFactor:"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "-initWithFishColor:andWithInitialPosition:andWithScaleFactor:andWithPlayerStatus:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -40,11 +40,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Fish-Eat-Fish World/Fish.m"
-            timestampString = "518542031.446862"
+            timestampString = "518590283.866644"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "299"
-            endingLineNumber = "299"
+            startingLineNumber = "312"
+            endingLineNumber = "312"
             landmarkName = "-encodeWithCoder:"
             landmarkType = "7">
          </BreakpointContent>

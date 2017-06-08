@@ -24,6 +24,7 @@
 
 + (CollisionConfiguration*) getCollisionConfigurationForFishColor: (FishColor) fishColor;
 
+
 + (int) getRandomFishColor;
 
 @end

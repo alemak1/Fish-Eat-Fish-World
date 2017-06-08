@@ -8,11 +8,24 @@
 
 #import <Foundation/Foundation.h>
 #import "GameScene+SKPhysicsContactDelegate.h"
+#import "SKPhysicsContact+HelperMethods.h"
+#import "CollisionConfiguration.h"
 
 @implementation GameScene(SKPhysicsContactDelegate)
 
--(void) didBeginContact:(SKPhysicsContact *)contact{
+//Implement a generalized function that takes separate blocks of code as arguments for collision events with each of the possible collision bodies in the game
+typedef void(^ContactHandler)(void);
+typedef void(^OtherBodyContactHandler)(SKPhysicsBody*);
 
+
+
+-(void) didBeginContact:(SKPhysicsContact *)contact{
+    
+    for (ContactHandler contactHandler in [SKPhysicsContact allContactHandlersForContact:contact]) {
+        
+        //Execute all of the callbacks required for handling the contact event
+        contactHandler();
+    }
     
 }
 
@@ -20,5 +33,8 @@
     
     
 }
+
+
+
 
 @end

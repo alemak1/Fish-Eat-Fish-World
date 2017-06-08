@@ -25,7 +25,7 @@
 
 /** Conveience initializer that takes fishColor as its sole argument and which then delegates to a designated initializer **/
 
-- (id) initWithRandomColorAndWithPosition:(CGPoint)initialPosition andWithScaleFactor:(CGFloat)scalingFactor{
+- (id) initWithRandomColorAndWithPosition:(CGPoint)initialPosition andWithScaleFactor:(CGFloat)scalingFactor andWithPlayerStatus:(BOOL)isPlayer{
     
     FishColor randomFishColor = [Fish getRandomFishColor];
     
@@ -57,6 +57,10 @@
     
     CollisionConfiguration* collisionConfiguration = [Fish getCollisionConfigurationForFishColor:randomFishColor];
     
+    if(isPlayer){
+        [CollisionConfiguration addPlayerCategoryBitMaskFor:collisionConfiguration];
+    }
+    
     [fishPhysicsBody setCategoryBitMask:[collisionConfiguration categoryBitMask]];
     [fishPhysicsBody setCollisionBitMask:[collisionConfiguration collisionBitMask]];
     [fishPhysicsBody setContactTestBitMask:[collisionConfiguration contactBitMask]];
@@ -78,7 +82,7 @@
     
 }
 
-- (id) initWithFishColor: (FishColor)fishColor andWithInitialPosition:(CGPoint)initialPosition andWithScaleFactor: (CGFloat)scalingFactor{
+- (id) initWithFishColor: (FishColor)fishColor andWithInitialPosition:(CGPoint)initialPosition andWithScaleFactor: (CGFloat)scalingFactor andWithPlayerStatus:(BOOL)isPlayer{
    
   
     /** Allocate and default initalize a fish texture **/
@@ -113,6 +117,10 @@
     //Bitmasks for Collision Events
     
     CollisionConfiguration* collisionConfiguration = [Fish getCollisionConfigurationForFishColor:fishColor];
+    
+    if(isPlayer){
+        [CollisionConfiguration addPlayerCategoryBitMaskFor:collisionConfiguration];
+    }
     
     [fishPhysicsBody setCategoryBitMask:[collisionConfiguration categoryBitMask]];
     [fishPhysicsBody setCollisionBitMask:[collisionConfiguration collisionBitMask]];
