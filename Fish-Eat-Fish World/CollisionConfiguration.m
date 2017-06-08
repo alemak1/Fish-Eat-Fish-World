@@ -99,7 +99,7 @@
     static CollisionConfiguration* greenPlantCollisionConfiguration = nil;
     
     if(greenPlantCollisionConfiguration == nil){
-        greenPlantCollisionConfiguration = [[CollisionConfiguration alloc] initWithCategoryBitmask:BARRIER_CATEGORY_BITMASK];
+        greenPlantCollisionConfiguration = [[CollisionConfiguration alloc] initWithCategoryBitmask:GREEN_PLANT_CATEGORY_BITMASK];
     }
     
     return greenPlantCollisionConfiguration;
@@ -133,6 +133,16 @@
     }
     
     return playerCollisionConfiguration;
+}
+
++ (CollisionConfiguration*) blowFishCollisionConfiguration{
+    static CollisionConfiguration* blowFishCollisionConfiguration = nil;
+    
+    if(blowFishCollisionConfiguration == nil){
+        blowFishCollisionConfiguration = [[CollisionConfiguration alloc] initWithCategoryBitmask:BLOWFISH_CATEGORY_BITMASK];
+    }
+    
+    return blowFishCollisionConfiguration;
 }
 
 

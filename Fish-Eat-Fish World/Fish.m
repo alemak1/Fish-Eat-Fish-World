@@ -122,11 +122,15 @@
         [CollisionConfiguration addPlayerCategoryBitMaskFor:collisionConfiguration];
     }
     
+    NSLog(@"Fish with color %@ has a category bitmask value of: %d", [Fish getFishColorNameForFishColorEnum:fishColor], [collisionConfiguration categoryBitMask]);
+    
     [fishPhysicsBody setCategoryBitMask:[collisionConfiguration categoryBitMask]];
     [fishPhysicsBody setCollisionBitMask:[collisionConfiguration collisionBitMask]];
     [fishPhysicsBody setContactTestBitMask:[collisionConfiguration contactBitMask]];
     
     [self setPhysicsBody:fishPhysicsBody];
+    
+   
     
     [self configureDefaultAnimation];
     

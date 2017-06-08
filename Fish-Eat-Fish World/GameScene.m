@@ -14,6 +14,8 @@
 #import "TextureAtlasManager.h"
 #import "Fish.h"
 
+//For debug purposes:
+#import "CollisionConfiguration.h"
 
 @implementation GameScene {
     NSTimeInterval _lastUpdateTime;
@@ -105,22 +107,26 @@ SKTileMapNode * _oceanTileMap;
     CGPoint pinkPos = CGPointMake(0.0,100.0);
     
     CGFloat scalingFactor = 1.20;
-    /**
-    Fish* pinkFish = [[Fish alloc] initWithFishColor:PINK andWithInitialPosition:pinkPos andWithScaleFactor:scalingFactor];
+    
+    Fish* pinkFish = [[Fish alloc] initWithFishColor:PINK andWithInitialPosition:pinkPos andWithScaleFactor:scalingFactor andWithPlayerStatus:NO];
+   // [[pinkFish physicsBody] setCategoryBitMask:PINK_FISH_CATEGORY_BITMASK];
     [_worldNode addChild:pinkFish];
     
-    Fish* orangeFish = [[Fish alloc] initWithFishColor:ORANGE andWithInitialPosition:orangePos andWithScaleFactor: scalingFactor];
+    Fish* orangeFish = [[Fish alloc] initWithFishColor:ORANGE andWithInitialPosition:orangePos andWithScaleFactor: scalingFactor andWithPlayerStatus:NO];
+   // [[orangeFish physicsBody] setCategoryBitMask:ORANGE_FISH_CATEGORY_BITMASK];
     [_worldNode addChild:orangeFish];
     
-    Fish* redFish = [[Fish alloc] initWithFishColor:RED andWithInitialPosition:redPos andWithScaleFactor:scalingFactor];
+    Fish* redFish = [[Fish alloc] initWithFishColor:RED andWithInitialPosition:redPos andWithScaleFactor:scalingFactor andWithPlayerStatus:NO];
+    //[[redFish physicsBody] setCategoryBitMask:RED_FISH_CATEGORY_BITMASK];
     [_worldNode addChild:redFish];
      
-     Fish* greenFish = [[Fish alloc] initWithFishColor:GREEN andWithInitialPosition:greenPos andWithScaleFactor:scalingFactor];
+    Fish* greenFish = [[Fish alloc] initWithFishColor:GREEN andWithInitialPosition:greenPos andWithScaleFactor:scalingFactor andWithPlayerStatus:NO];
+   // [[greenFish physicsBody] setCategoryBitMask:GREEN_FISH_CATEGORY_BITMASK];
      [_worldNode addChild:greenFish];
      
-    **/
     
-    _player = [[Fish alloc] initWithFishColor:BLUE andWithInitialPosition:bluePos andWithScaleFactor:scalingFactor andWithPlayerStatus:YES];
+    
+    _player = [[Fish alloc] initWithFishColor:RED andWithInitialPosition:bluePos andWithScaleFactor:scalingFactor andWithPlayerStatus:YES];
     [_worldNode addChild:_player];
     
   

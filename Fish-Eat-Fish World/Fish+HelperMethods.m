@@ -101,14 +101,19 @@
     switch (fishColor) {
         case RED:
             collisionConfiguration = [CollisionConfiguration redFishCollisionConfiguration];
+            break;
         case ORANGE:
             collisionConfiguration = [CollisionConfiguration orangeFishCollisionConfiguration];
+            break;
         case BLUE:
             collisionConfiguration = [CollisionConfiguration blueFishCollisionConfiguration];
+            break;
         case GREEN:
             collisionConfiguration = [CollisionConfiguration greenFishCollisionConfiguration];
+            break;
         case PINK:
             collisionConfiguration = [CollisionConfiguration pinkFishCollisionConfiguration];
+            break;
     }
     
     return collisionConfiguration;
@@ -148,6 +153,22 @@
     
     return fishTexture;
     
+}
+
++ (NSString*) getFishColorNameForFishColorEnum:(FishColor)fishColor{
+    
+    switch (fishColor) {
+        case RED:
+            return @"RED";
+        case BLUE:
+            return @"BLUE";
+        case GREEN:
+            return @"GREEN";
+        case ORANGE:
+            return @"ORANGE";
+        case PINK:
+            return @"PINK";
+    }
 }
 
 

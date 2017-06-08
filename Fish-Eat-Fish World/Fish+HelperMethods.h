@@ -18,11 +18,15 @@
 
 + (SKTexture*) getTextureForFishColor:(FishColor)fishColor andForFishOrientation: (FishOrientation)fishOrientation;
 
+
 + (SKTexture*) getRandomFishColorTexture;
 
 + (SKTexture*) getSkeletonTextureForFishColor: (FishColor)fishColor andForFishOrientation:(FishOrientation) fishOrientation;
 
 + (CollisionConfiguration*) getCollisionConfigurationForFishColor: (FishColor) fishColor;
+
+//For debugging only;
++ (NSString*) getFishColorNameForFishColorEnum:(FishColor)fishColor;
 
 
 + (int) getRandomFishColor;

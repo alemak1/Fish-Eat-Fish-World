@@ -21,11 +21,15 @@ typedef void(^OtherBodyContactHandler)(SKPhysicsBody*);
 
 -(void) didBeginContact:(SKPhysicsContact *)contact{
     
+    [SKPhysicsContact executeContactHandlersForContactObject:contact];
+    
+    /**
     for (ContactHandler contactHandler in [SKPhysicsContact allContactHandlersForContact:contact]) {
         
         //Execute all of the callbacks required for handling the contact event
         contactHandler();
     }
+     **/
     
 }
 
