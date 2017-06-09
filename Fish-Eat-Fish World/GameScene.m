@@ -12,7 +12,10 @@
 #import "UIColor+SpecialColorSchemes.h"
 #import "UIColor+FishColorSchemes.h"
 #import "TextureAtlasManager.h"
+#import "EntityManager.h"
+
 #import "Fish.h"
+#import "GKFish.h"
 
 //For debug purposes:
 #import "CollisionConfiguration.h"
@@ -33,6 +36,9 @@ SKTileMapNode * _oceanTileMap;
     // Initialize update time
     _lastUpdateTime = 0;
 
+    //Initialize the entity manager with the current scene
+    _entityManager = [[EntityManager alloc] initWithScene:self];
+    
     //Set background color
     [self setBackgroundColor:[UIColor cyanColor]];
     
@@ -110,11 +116,32 @@ SKTileMapNode * _oceanTileMap;
     
     Fish* pinkFish = [[Fish alloc] initWithFishColor:PINK andWithInitialPosition:pinkPos andWithScaleFactor:scalingFactor andWithPlayerStatus:NO];
    // [[pinkFish physicsBody] setCategoryBitMask:PINK_FISH_CATEGORY_BITMASK];
-    [_worldNode addChild:pinkFish];
+    
+    GKFish* pinkFishEntity = [[GKFish alloc] initWithFishNode:pinkFish];
+    [[self entityManager] addToWorld:pinkFishEntity];
+    
+   // [_worldNode addChild:pinkFish];
+    
+    Fish* pinkFish2 = [[Fish alloc] initWithFishColor:PINK andWithInitialPosition:CGPointMake(-50.0, 100.0) andWithScaleFactor:1.0 andWithPlayerStatus:NO];
+    
+    GKFish* pinkFishEntity2 = [[GKFish alloc] initWithFishNode:pinkFish2];
+    [[self entityManager] addToWorld:pinkFishEntity2];
+    
+    //[_worldNode addChild:pinkFish2];
     
     Fish* orangeFish = [[Fish alloc] initWithFishColor:ORANGE andWithInitialPosition:orangePos andWithScaleFactor: scalingFactor andWithPlayerStatus:NO];
    // [[orangeFish physicsBody] setCategoryBitMask:ORANGE_FISH_CATEGORY_BITMASK];
-    [_worldNode addChild:orangeFish];
+    
+    GKFish* orangeFishEntity = [[GKFish alloc] initWithFishNode:orangeFish];
+    [[self entityManager] addToWorld:orangeFishEntity];
+    
+    //[_worldNode addChild:orangeFish];
+    
+    Fish* orangeFish2 = [[Fish alloc] initWithFishColor:ORANGE andWithInitialPosition:CGPointMake(40.0, 100.0) andWithScaleFactor:1.0 andWithPlayerStatus:NO];
+    [_worldNode addChild:orangeFish2];
+    
+    Fish* orangeFish3 = [[Fish alloc]initWithFishColor:ORANGE andWithInitialPosition:CGPointMake(150.0, 100.0) andWithScaleFactor:1.0 andWithPlayerStatus:NO];
+    [_worldNode addChild:orangeFish3];
     
     Fish* redFish = [[Fish alloc] initWithFishColor:RED andWithInitialPosition:redPos andWithScaleFactor:scalingFactor andWithPlayerStatus:NO];
     //[[redFish physicsBody] setCategoryBitMask:RED_FISH_CATEGORY_BITMASK];
@@ -126,7 +153,7 @@ SKTileMapNode * _oceanTileMap;
      
     
     
-    _player = [[Fish alloc] initWithFishColor:RED andWithInitialPosition:bluePos andWithScaleFactor:scalingFactor andWithPlayerStatus:YES];
+    _player = [[Fish alloc] initWithFishColor:BLUE andWithInitialPosition:bluePos andWithScaleFactor:scalingFactor andWithPlayerStatus:YES];
     [_worldNode addChild:_player];
     
   
@@ -323,8 +350,11 @@ SKTileMapNode * _oceanTileMap;
         _lastUpdateTime = currentTime;
     }
     
+    
     // Calculate time since last update
     CGFloat dt = currentTime - _lastUpdateTime;
+    
+    [_entityManager update:dt];
     
     /**
     vector_int2 playerPos = [self getGraphPositionFor:[_player position] forTileMap:_oceanTileMap];

@@ -6,6 +6,7 @@
 //  Copyright © 2017 AlexMakedonski. All rights reserved.
 //
 
+#import "Fish.h"
 #import "SKPhysicsContact+HelperMethods.h"
 #import "CollisionConfiguration.h"
 
@@ -27,10 +28,10 @@
     
     playerContactHandler();
     
+    orangeFishContactHandler();
     blueFishContactHandler();
     redFishContactHandler();
     greenFishContactHandler();
-    orangeFishContactHandler();
     pinkFishContactHandler();
 }
 
@@ -185,59 +186,57 @@
 + (ContactHandler) getRedFishContactHandlerForContactObject:(SKPhysicsContact*)contact{
     return [self contactHandlerWithReferenceCategoryBitmask:RED_FISH_CATEGORY_BITMASK forContact:contact
             
-                                  withRedFishContactHandler:^(SKPhysicsBody*playerBody){
-                                      NSLog(@"The physics body %@ has contacted the red fish", @"Red Fish");
-                                  }
+        withRedFishContactHandler:^(SKPhysicsBody*playerBody){
+            NSLog(@"The physics body %@ has contacted the red fish", @"Red Fish");
+        }
             
-                                 withBlueFishContactHandler:^(SKPhysicsBody*playerBody){
-                                     NSLog(@"The physics body %@ has contacted the blue fish", @"Red Fish");
+        withBlueFishContactHandler:^(SKPhysicsBody*playerBody){
+            NSLog(@"The physics body %@ has contacted the blue fish", @"Red Fish");
+        }
+            
+        withGreenFishContactHandler:^(SKPhysicsBody*playerBody){
+            NSLog(@"The physics body %@ has contacted the green fish", @"Red Fish");
+            }
+            
+        withPinkFishContactHandler:^(SKPhysicsBody*playerBody){
+            NSLog(@"The physics body %@ has contacted the pink fish", @"Red Fish");
+            }
+            
+        withOrangeFishContactHandler:^(SKPhysicsBody*playerBody){
+            NSLog(@"The physics body %@ has contacted the orange fish", @"Red Fish");
+            }
+            
+        withPlayerContactHandler:^(SKPhysicsBody*playerBody){
+            NSLog(@"The physics body %@ has contacted the player", @"Red Fish");
+            }
+            
+        withOrangePlantContactHandler:^(SKPhysicsBody*playerBody){
+            NSLog(@"The physics body %@ has contacted the orange fish", @"Red Fish");
+            }
+            
+        withPurplePlantContactHandler:^(SKPhysicsBody*playerBody){
+            NSLog(@"The physics body %@ has contacted the purple plant", @"Red Fish");
+                }
+            
+        withGreenPlantContactHandler:^(SKPhysicsBody*playerBody){
+            NSLog(@"The physics body %@ has contacted the green fish", @"Red Fish");
+            }
+            
+        withEelContactHandler:^(SKPhysicsBody*playerBody){
+            NSLog(@"The physics body %@ has contacted the eel", @"Red Fish");
+            }
+            
+        withBlowfishContactHandler:^(SKPhysicsBody*playerBody){
+            NSLog(@"The physics body %@ has contacted the blowfish", @"Red Fish");
                                  }
             
-                                withGreenFishContactHandler:^(SKPhysicsBody*playerBody){
-                                    NSLog(@"The physics body %@ has contacted the green fish", @"Red Fish");
-                                }
+        withBarrierContactHandler:^(SKPhysicsBody*playerBody){
+            NSLog(@"The physics body %@ has contacted the barrier fish", @"Red Fish");
+            }
             
-                                 withPinkFishContactHandler:^(SKPhysicsBody*playerBody){
-                                     NSLog(@"The physics body %@ has contacted the pink fish", @"Red Fish");
-                                 }
-            
-                               withOrangeFishContactHandler:^(SKPhysicsBody*playerBody){
-                                   NSLog(@"The physics body %@ has contacted the orange fish", @"Red Fish");
-                               }
-            
-                                   withPlayerContactHandler:^(SKPhysicsBody*playerBody){
-                                       NSLog(@"The physics body %@ has contacted the player", @"Red Fish");
-                                   }
-            
-                              withOrangePlantContactHandler:^(SKPhysicsBody*playerBody){
-                                  NSLog(@"The physics body %@ has contacted the orange fish", @"Red Fish");
-                              }
-            
-                              withPurplePlantContactHandler:^(SKPhysicsBody*playerBody){
-                                  NSLog(@"The physics body %@ has contacted the purple plant", @"Red Fish");
-                                  
-                              }
-            
-                               withGreenPlantContactHandler:^(SKPhysicsBody*playerBody){
-                                   NSLog(@"The physics body %@ has contacted the green fish", @"Red Fish");
-                               }
-            
-                                      withEelContactHandler:^(SKPhysicsBody*playerBody){
-                                          NSLog(@"The physics body %@ has contacted the eel", @"Red Fish");
-                                      }
-            
-                                 withBlowfishContactHandler:^(SKPhysicsBody*playerBody){
-                                     NSLog(@"The physics body %@ has contacted the blowfish", @"Red Fish");
-                                 }
-            
-                                  withBarrierContactHandler:^(SKPhysicsBody*playerBody){
-                                      NSLog(@"The physics body %@ has contacted the barrier fish", @"Red Fish");
-                                  }
-            
-                              withCollectibleContactHandler:^(SKPhysicsBody*playerBody){
-                                  NSLog(@"The physics body %@ has contacted the collectible", @"Red Fish");
-                                  
-                              }
+        withCollectibleContactHandler:^(SKPhysicsBody*playerBody){
+            NSLog(@"The physics body %@ has contacted the collectible", @"Red Fish");
+            }
             ];
     
     
@@ -307,63 +306,80 @@
 }
 
 
+//MARK: *********** ORANGE FISH OTHERBODY CONTACT HANDLER
 
 + (ContactHandler) getOrangeFishContactHandlerForContactObject:(SKPhysicsContact*)contact{
     return [self contactHandlerWithReferenceCategoryBitmask:ORANGE_FISH_CATEGORY_BITMASK forContact:contact
             
-                                  withRedFishContactHandler:^(SKPhysicsBody*playerBody){
-                                      NSLog(@"The physics body %@ has contacted the red fish", @"Orange Fish");
-                                  }
+        withRedFishContactHandler:^(SKPhysicsBody*orangePB){
+                NSLog(@"The physics body %@ has contacted the red fish", @"Orange Fish");
             
-                                 withBlueFishContactHandler:^(SKPhysicsBody*playerBody){
-                                     NSLog(@"The physics body %@ has contacted the blue fish", @"Orange Fish");
-                                 }
+            }
             
-                                withGreenFishContactHandler:^(SKPhysicsBody*playerBody){
-                                    NSLog(@"The physics body %@ has contacted the green fish", @"Orange Fish");
-                                }
+        withBlueFishContactHandler:^(SKPhysicsBody*orangePB){
+            NSLog(@"The physics body %@ has contacted the blue fish", @"Orange Fish");
             
-                                 withPinkFishContactHandler:^(SKPhysicsBody*playerBody){
-                                     NSLog(@"The physics body %@ has contacted the pink fish", @"Orange Fish");
-                                 }
+        
             
-                               withOrangeFishContactHandler:^(SKPhysicsBody*playerBody){
-                                   NSLog(@"The physics body %@ has contacted the orange fish", @"Orange Fish");
-                               }
+            }
             
-                                   withPlayerContactHandler:^(SKPhysicsBody*playerBody){
-                                       NSLog(@"The physics body %@ has contacted the player", @"Orange Fish");
-                                   }
+        withGreenFishContactHandler:^(SKPhysicsBody*orangePB){
+                NSLog(@"The physics body %@ has contacted the green fish", @"Orange Fish");
             
-                              withOrangePlantContactHandler:^(SKPhysicsBody*playerBody){
-                                  NSLog(@"The physics body %@ has contacted the orange fish", @"Orange Fish");
-                              }
+            }
             
-                              withPurplePlantContactHandler:^(SKPhysicsBody*playerBody){
-                                  NSLog(@"The physics body %@ has contacted the purple plant", @"Orange Fish");
-                                  
-                              }
+        withPinkFishContactHandler:^(SKPhysicsBody*orangePB){
+                NSLog(@"The physics body %@ has contacted the pink fish", @"Orange Fish");
+           
+            }
             
-                               withGreenPlantContactHandler:^(SKPhysicsBody*playerBody){
-                                   NSLog(@"The physics body %@ has contacted the green fish", @"Orange Fish");
-                               }
+        withOrangeFishContactHandler:^(SKPhysicsBody*orangePB){
+                NSLog(@"The physics body %@ has contacted the orange fish", @"Orange Fish");
+          
             
-                                      withEelContactHandler:^(SKPhysicsBody*playerBody){
-                                          NSLog(@"The physics body %@ has contacted the eel", @"Red Fish");
-                                      }
             
-                                 withBlowfishContactHandler:^(SKPhysicsBody*playerBody){
-                                     NSLog(@"The physics body %@ has contacted the blowfish", @"Orange Fish");
-                                 }
+            }
             
-                                  withBarrierContactHandler:^(SKPhysicsBody*playerBody){
-                                      NSLog(@"The physics body %@ has contacted the barrier fish", @"Orange Fish");
-                                  }
+        withPlayerContactHandler:^(SKPhysicsBody*orangePB){
+                NSLog(@"The physics body %@ has contacted the player", @"Orange Fish");
             
-                              withCollectibleContactHandler:^(SKPhysicsBody*playerBody){
-                                  NSLog(@"The physics body %@ has contacted the collectible", @"Orange Fish");
-                                  
-                              }
+            }
+            
+        withOrangePlantContactHandler:^(SKPhysicsBody*orangePB){
+                NSLog(@"The physics body %@ has contacted the orange fish", @"Orange Fish");
+          
+            }
+            
+        withPurplePlantContactHandler:^(SKPhysicsBody*orangePB){
+                NSLog(@"The physics body %@ has contacted the purple plant", @"Orange Fish");
+            
+            
+            }
+            
+        withGreenPlantContactHandler:^(SKPhysicsBody*orangePB){
+                NSLog(@"The physics body %@ has contacted the green fish", @"Orange Fish");
+           
+            }
+            
+        withEelContactHandler:^(SKPhysicsBody*orangePB){
+            NSLog(@"The physics body %@ has contacted the eel", @"Red Fish");
+         
+        }
+            
+        withBlowfishContactHandler:^(SKPhysicsBody*orangePB){
+                NSLog(@"The physics body %@ has contacted the blowfish", @"Orange Fish");
+            }
+            
+        withBarrierContactHandler:^(SKPhysicsBody*orangePB){
+            NSLog(@"The physics body %@ has contacted the barrier fish", @"Orange Fish");
+         
+            }
+            
+        withCollectibleContactHandler:^(SKPhysicsBody*orangePB){
+            NSLog(@"The physics body %@ has contacted the collectible", @"Orange Fish");
+         
+            
+                }
             ];
     
     

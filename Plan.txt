@@ -1,5 +1,11 @@
 
 
+//Use extension to add properties to the SKPhysicsBodies to make it easier to perform 	operations on the parent sprite node directly from contact logic section
+
+
+//Still need to implement property observers for fish orientation or velocity
+
+
 //Define SpriteNode subclass for collectibles
 //Define entities and components to implement GKRuleSystem as well as GKAgent/Goal behavior
 //Define navigable area with mesh graph or tile node in order to implement pathfinding
@@ -7,3 +13,27 @@
 //Objectives (Mode1) get a set of collectible items lost at the bottom of the ocean
 	     (Mode2) avoid being eaten
 	     (Mode3) eat all enemy fish
+
+//IDEA: 	Run a simulation where fish batter randomly and eat each other based on   defined rules; users can place bets on the winning fish; place bets on remaining 3,4,5 fish also; 
+
+//IDEA:	Fish food (certain foods allow ALL fish to grow or are poisonous to ALL fish
+	Certain foods allow fish to temporarily change colors and act as the colored fish:
+
+		Carrot (turns fish orange)
+		Tomato/Apple (turns fish red)
+	
+	Foods pics: carrot, mushroom, 
+	alternatively, colorize the different foods
+
+Fish contact rules:
+	Pink Fish (smallest):
+	
+	Orange Fish (second smallest):
+
+	Blue Fish: (intermediary)
+
+	Green Fish (second largest):
+
+	Red Fish (largest):
+		
+		

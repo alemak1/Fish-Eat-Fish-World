@@ -10,10 +10,13 @@
 #import <GameplayKit/GameplayKit.h>
 #import "Fish.h"
 
+@class EntityManager;
+
 @interface GameScene : SKScene<SKPhysicsContactDelegate>
 
-    @property (nonatomic) NSMutableDictionary<NSString*, GKGraph *> *graphs;
 
+    @property (nonatomic) NSMutableDictionary<NSString*, GKGraph *> *graphs;
+    @property EntityManager* entityManager;
 
     @property Fish* player;
 

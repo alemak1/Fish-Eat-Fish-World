@@ -17,7 +17,6 @@
 /** Class extension is used here to emulated private methods, which are forward declared ehre and encapsulated in the main implementation file **/
 @implementation Fish
 
-
     SKAction* _defaultAnimation;
     NSMutableDictionary<NSString*,SKAction*>* _animationsDictionary;
 
@@ -26,6 +25,7 @@
 /** Conveience initializer that takes fishColor as its sole argument and which then delegates to a designated initializer **/
 
 - (id) initWithRandomColorAndWithPosition:(CGPoint)initialPosition andWithScaleFactor:(CGFloat)scalingFactor andWithPlayerStatus:(BOOL)isPlayer{
+    
     
     FishColor randomFishColor = [Fish getRandomFishColor];
     
@@ -359,6 +359,19 @@
 
 - (void) loadFish{
     [NSKeyedUnarchiver unarchiveObjectWithFile:@"/path/to/archive"];
+}
+
+- (void) dieAnimation{
+    NSLog(@"Running die animation.....");
+    [[self physicsBody] setVelocity:CGVectorMake(0.00, 0.00)];
+    [self runAction:[SKAction scaleTo:2.0 duration:0.5]];
+    [self removeFromParent];
+
+}
+
+- (void)dealloc{
+    
+    [self removeObserver:self forKeyPath:@"currentFishVelocity" context:nil];
 }
 
 @end

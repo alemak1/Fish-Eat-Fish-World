@@ -10,10 +10,14 @@
 		BD2A76251EE3EBF000356490 /* Fish+HelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2A76241EE3EBF000356490 /* Fish+HelperMethods.m */; };
 		BD2A762B1EE3F51000356490 /* RandomPointGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2A762A1EE3F51000356490 /* RandomPointGenerator.m */; };
 		BD2A762D1EE3FB2500356490 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2A762C1EE3FB2500356490 /* Constants.m */; };
+		BD2BBF811EE98438001E27D2 /* Fish+Animations.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2BBF801EE98438001E27D2 /* Fish+Animations.m */; };
 		BD2CF68A1EE26EA8007A1387 /* OceanScene3.sks in Resources */ = {isa = PBXBuildFile; fileRef = BD2CF6891EE26EA8007A1387 /* OceanScene3.sks */; };
 		BD2CF68C1EE26F0B007A1387 /* OceanFloorTileSet2.sks in Resources */ = {isa = PBXBuildFile; fileRef = BD2CF68B1EE26F0B007A1387 /* OceanFloorTileSet2.sks */; };
 		BD312A431EE8FDB900960B58 /* Plant.m in Sources */ = {isa = PBXBuildFile; fileRef = BD312A421EE8FDB900960B58 /* Plant.m */; };
 		BD312A491EE91FC100960B58 /* SKPhysicsContact+HelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = BD312A481EE91FC100960B58 /* SKPhysicsContact+HelperMethods.m */; };
+		BD339FDE1EEA5AEE00ABE4BE /* RenderComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = BD339FDD1EEA5AED00ABE4BE /* RenderComponent.m */; };
+		BD339FE31EEA5B9600ABE4BE /* GKFish.m in Sources */ = {isa = PBXBuildFile; fileRef = BD339FE21EEA5B9600ABE4BE /* GKFish.m */; };
+		BD339FE61EEA608000ABE4BE /* EntityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BD339FE51EEA608000ABE4BE /* EntityManager.m */; };
 		BD38EDA91EE199F8009C235F /* TextureAtlasManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BD38EDA81EE199F8009C235F /* TextureAtlasManager.m */; };
 		BD38EDAC1EE19CCA009C235F /* Fish.m in Sources */ = {isa = PBXBuildFile; fileRef = BD38EDAB1EE19CCA009C235F /* Fish.m */; };
 		BD4932F91EE7E58E006C8B55 /* Collectibles.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4932F81EE7E58E006C8B55 /* Collectibles.m */; };
@@ -52,12 +56,21 @@
 		BD2A762C1EE3FB2500356490 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		BD2A762E1EE3FB3100356490 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		BD2B118B1EE409BF00170261 /* FishOrientation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FishOrientation.h; sourceTree = "<group>"; };
+		BD2BBF7F1EE983DA001E27D2 /* Fish+Animations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fish+Animations.h"; sourceTree = "<group>"; };
+		BD2BBF801EE98438001E27D2 /* Fish+Animations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Fish+Animations.m"; sourceTree = "<group>"; };
 		BD2CF6891EE26EA8007A1387 /* OceanScene3.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = OceanScene3.sks; sourceTree = "<group>"; };
 		BD2CF68B1EE26F0B007A1387 /* OceanFloorTileSet2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = OceanFloorTileSet2.sks; sourceTree = "<group>"; };
 		BD312A411EE8FD9500960B58 /* Plant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Plant.h; sourceTree = "<group>"; };
 		BD312A421EE8FDB900960B58 /* Plant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plant.m; sourceTree = "<group>"; };
 		BD312A471EE91FC100960B58 /* SKPhysicsContact+HelperMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKPhysicsContact+HelperMethods.h"; sourceTree = "<group>"; };
 		BD312A481EE91FC100960B58 /* SKPhysicsContact+HelperMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKPhysicsContact+HelperMethods.m"; sourceTree = "<group>"; };
+		BD339FDD1EEA5AED00ABE4BE /* RenderComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RenderComponent.m; sourceTree = "<group>"; };
+		BD339FDF1EEA5AFA00ABE4BE /* RenderComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RenderComponent.h; sourceTree = "<group>"; };
+		BD339FE11EEA5B8A00ABE4BE /* GKFish.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GKFish.h; sourceTree = "<group>"; };
+		BD339FE21EEA5B9600ABE4BE /* GKFish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKFish.m; sourceTree = "<group>"; };
+		BD339FE51EEA608000ABE4BE /* EntityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityManager.m; sourceTree = "<group>"; };
+		BD339FE71EEA608900ABE4BE /* EntityManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntityManager.h; sourceTree = "<group>"; };
+		BD346EA71EE98F3300DA4954 /* FishAnimationType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FishAnimationType.h; sourceTree = "<group>"; };
 		BD38EDA71EE199DC009C235F /* TextureAtlasManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextureAtlasManager.h; sourceTree = "<group>"; };
 		BD38EDA81EE199F8009C235F /* TextureAtlasManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextureAtlasManager.m; sourceTree = "<group>"; };
 		BD38EDAB1EE19CCA009C235F /* Fish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fish.m; sourceTree = "<group>"; };
@@ -167,6 +180,33 @@
 			name = Constants;
 			sourceTree = "<group>";
 		};
+		BD339FDC1EEA5ACD00ABE4BE /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				BD339FDD1EEA5AED00ABE4BE /* RenderComponent.m */,
+				BD339FDF1EEA5AFA00ABE4BE /* RenderComponent.h */,
+			);
+			name = Component;
+			sourceTree = "<group>";
+		};
+		BD339FE01EEA5B7D00ABE4BE /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				BD339FE11EEA5B8A00ABE4BE /* GKFish.h */,
+				BD339FE21EEA5B9600ABE4BE /* GKFish.m */,
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
+		BD339FE41EEA5F0F00ABE4BE /* EntityManager */ = {
+			isa = PBXGroup;
+			children = (
+				BD339FE51EEA608000ABE4BE /* EntityManager.m */,
+				BD339FE71EEA608900ABE4BE /* EntityManager.h */,
+			);
+			name = EntityManager;
+			sourceTree = "<group>";
+		};
 		BD38EDAA1EE19CB4009C235F /* Fish */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +217,9 @@
 				BD2A76271EE3ECD600356490 /* FishColor.h */,
 				BD2A76281EE3F2F800356490 /* FishConfiguration.h */,
 				BD2B118B1EE409BF00170261 /* FishOrientation.h */,
+				BD2BBF7F1EE983DA001E27D2 /* Fish+Animations.h */,
+				BD2BBF801EE98438001E27D2 /* Fish+Animations.m */,
+				BD346EA71EE98F3300DA4954 /* FishAnimationType.h */,
 			);
 			name = Fish;
 			sourceTree = "<group>";
@@ -260,6 +303,9 @@
 		BDA56D9E1EE16930004D724E /* Fish-Eat-Fish World */ = {
 			isa = PBXGroup;
 			children = (
+				BD339FE41EEA5F0F00ABE4BE /* EntityManager */,
+				BD339FE01EEA5B7D00ABE4BE /* Entity */,
+				BD339FDC1EEA5ACD00ABE4BE /* Component */,
 				BD312A401EE8FD8B00960B58 /* Plants */,
 				BD4932F61EE7DD4F006C8B55 /* Collectibles */,
 				BD5AC2A01EE4C6D200EB093F /* ViewControllers */,
@@ -395,6 +441,7 @@
 				BDA56DBF1EE17549004D724E /* UIColor+FishColorSchemes.m in Sources */,
 				BDB030431EE83CC200E79F74 /* CollisionSettings.m in Sources */,
 				BD2A76251EE3EBF000356490 /* Fish+HelperMethods.m in Sources */,
+				BD2BBF811EE98438001E27D2 /* Fish+Animations.m in Sources */,
 				BD5AC2A31EE548C400EB093F /* InputControlType.m in Sources */,
 				BD66068D1EE6524F00CB1C7E /* BackgroundSelectionController.m in Sources */,
 				BDA56DAE1EE16930004D724E /* GameViewController.m in Sources */,
@@ -403,15 +450,18 @@
 				BD5AC29E1EE4C64F00EB093F /* InputControlSelectionController.m in Sources */,
 				BD38EDAC1EE19CCA009C235F /* Fish.m in Sources */,
 				BDA56DAB1EE16930004D724E /* GameScene.m in Sources */,
+				BD339FE61EEA608000ABE4BE /* EntityManager.m in Sources */,
 				BD5AC2A91EE560F600EB093F /* GameConfigurationController.m in Sources */,
 				BDA56DC21EE175D4004D724E /* UIColor+SpecialColorSchemes.m in Sources */,
 				BD2A762B1EE3F51000356490 /* RandomPointGenerator.m in Sources */,
 				BD4932F91EE7E58E006C8B55 /* Collectibles.m in Sources */,
+				BD339FE31EEA5B9600ABE4BE /* GKFish.m in Sources */,
 				BDB030401EE8385E00E79F74 /* CollisionConfiguration.m in Sources */,
 				BDA56DA11EE16930004D724E /* main.m in Sources */,
 				BD5AC2A61EE5505B00EB093F /* FishSelectionController.m in Sources */,
 				BD312A491EE91FC100960B58 /* SKPhysicsContact+HelperMethods.m in Sources */,
 				BD38EDA91EE199F8009C235F /* TextureAtlasManager.m in Sources */,
+				BD339FDE1EEA5AEE00ABE4BE /* RenderComponent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
